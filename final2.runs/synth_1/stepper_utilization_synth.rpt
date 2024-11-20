@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Nov 20 13:16:54 2024
+| Date         : Wed Nov 20 15:20:27 2024
 | Host         : P1-03 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file stepper_utilization_synth.rpt -pb stepper_utilization_synth.pb
 | Design       : stepper
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                |   71 |     0 |          0 |     63400 |  0.11 |
-|   LUT as Logic             |   50 |     0 |          0 |     63400 |  0.08 |
+| Slice LUTs*                |   73 |     0 |          0 |     63400 |  0.12 |
+|   LUT as Logic             |   52 |     0 |          0 |     63400 |  0.08 |
 |   LUT as Memory            |   21 |     0 |          0 |     19000 |  0.11 |
 |     LUT as Distributed RAM |   21 |     0 |            |           |       |
 |     LUT as Shift Register  |    0 |     0 |            |           |       |
@@ -92,7 +92,7 @@ Table of Contents
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   17 |     0 |          0 |       210 |  8.10 |
+| Bonded IOB                  |   25 |     0 |          0 |       210 | 11.90 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         6 |  0.00 |
@@ -149,9 +149,9 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |   91 |        Flop & Latch |
-| LUT6     |   26 |                 LUT |
+| LUT6     |   27 |                 LUT |
+| OBUF     |   20 |                  IO |
 | RAMS32   |   14 |  Distributed Memory |
-| OBUF     |   12 |                  IO |
 | LUT4     |   11 |                 LUT |
 | LUT3     |    8 |                 LUT |
 | CARRY4   |    8 |          CarryLogic |
@@ -159,8 +159,8 @@ Table of Contents
 | LUT2     |    6 |                 LUT |
 | LUT1     |    5 |                 LUT |
 | IBUF     |    5 |                  IO |
+| LUT5     |    3 |                 LUT |
 | OBUFT    |    2 |                  IO |
-| LUT5     |    2 |                 LUT |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

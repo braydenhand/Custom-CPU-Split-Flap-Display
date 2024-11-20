@@ -3,7 +3,7 @@ module stepper(
     input BTNR, 
     input [1:0] JB,
     output [4:1] JA,
-    output [7:0] LED,
+    output [15:0] LED,
     inout ps2_clk,
     inout ps2_data
     );
@@ -47,9 +47,11 @@ module stepper(
         .wEn(1'b0));        
 
     // Assign control to both JA and LED outputs
+    // vincent said to do this, i really didn't want to but he said to, im gonna
     assign JA = control;
 //    assign LED = {busy, read_data, target[3:0]};
-    assign LED = current[7:0];
+
+    assign LED = {posData[6:0], current[7:0]};
     reg [9:0] data_delay;
     // FSM logic
     always @ (posedge CLK100MHZ) begin
@@ -64,7 +66,10 @@ module stepper(
             end 
             if (data_delay == 10'b1) begin // timer is done
                 data_delay = 10'b0; // reset timer
-                target <= posData; //get the key position
+                if (posData != 7'b0) begin
+                    target <= posData; //get the key position
+                end
+                    
                 accept_new_key = 1'b0; // dont accept any more input until button is let go
             end
         end
@@ -94,6 +99,7 @@ module stepper(
                 current <= 32'b0;
             end
         end else if (init) begin
+
             count <= count + 1;
             // FSM: Update control state based on count
             if (count == 19'b1111111111111111111 && current != target) begin
