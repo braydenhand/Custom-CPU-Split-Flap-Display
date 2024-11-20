@@ -19,6 +19,7 @@ module stepper(
     wire [7:0] scancode;
     wire read_data, busy, err;
     wire [6:0] posData;
+    //
 
     PS2Interface ps2(
         .ps2_clk(ps2_clk),
@@ -75,7 +76,7 @@ module stepper(
         end
         if (BTNR) begin
             // Reset logic when button is pressed
-            target <= 0;
+//            target <= 0;
             
             count <= 20'b0;  
             current <= 31'b0; // zero out current pos
