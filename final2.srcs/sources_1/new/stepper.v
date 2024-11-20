@@ -11,7 +11,7 @@ module stepper(
     reg [31:0] target; 
     reg init;
     reg [31:0] current; 
-    
+    reg accept_new_key;
     reg [19:0] count;
     reg [3:0] control;
      // Lab Memory Files Location
@@ -48,13 +48,25 @@ module stepper(
 
     // Assign control to both JA and LED outputs
     assign JA = control;
-    assign LED = {busy, read_data, target[3:0]};
-    
+//    assign LED = {busy, read_data, target[3:0]};
+    assign LED = current[7:0];
+    reg [9:0] data_delay;
     // FSM logic
     always @ (posedge CLK100MHZ) begin
-    
-        if (read_data) begin
-            target <= posData;
+        if (!accept_new_key) begin // if you arent currently ready to accept input
+            if (!read_data) begin // button is let go
+                accept_new_key =1'b1; //accept new input
+            end
+        end
+        if (read_data && accept_new_key) begin // if we press a button and we arent currently processing a button
+            if (data_delay != 10'b1) begin // start a timer
+                    data_delay = data_delay + 1; // wait till its done
+            end 
+            if (data_delay == 10'b1) begin // timer is done
+                data_delay = 10'b0; // reset timer
+                target <= posData; //get the key position
+                accept_new_key = 1'b0; // dont accept any more input until button is let go
+            end
         end
         if (BTNR) begin
             // Reset logic when button is pressed
@@ -92,10 +104,11 @@ module stepper(
                     4'b0101: control <= 4'b1001;
                     4'b1001: control <= 4'b1010;
                 endcase
+                current = current + 1; // Increment step count
                 if (current >= 200) begin
-                    current <= 32'b0;
+                    current = 32'b0;
                 end
-                current <= current + 1; // Increment step count
+               
             end
         end
     end

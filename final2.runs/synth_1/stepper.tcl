@@ -92,6 +92,8 @@ read_mem {
 }
 read_verilog -library xil_defaultlib {
   C:/Users/bkh18/Downloads/lab6-7_kit/lab6_kit/RAM.v
+  C:/Users/bkh18/final2/final2.srcs/sources_1/new/dff.v
+  C:/Users/bkh18/final2/final2.srcs/sources_1/new/fsm.v
   C:/Users/bkh18/final2/final2.srcs/sources_1/new/stepper.v
 }
 read_vhdl -library xil_defaultlib C:/Users/bkh18/Downloads/lab6-7_kit/lab6_kit/Ps2Interface.vhd

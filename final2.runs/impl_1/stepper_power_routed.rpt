@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Wed Nov 20 12:37:51 2024
+| Date             : Wed Nov 20 13:17:41 2024
 | Host             : P1-03 running 64-bit major release  (build 9200)
 | Command          : report_power -file stepper_power_routed.rpt -pb stepper_power_summary_routed.pb -rpx stepper_power_routed.rpx
 | Design           : stepper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.085        |
+| Total On-Chip Power (W)  | 0.099        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.001        |
-| Device Static (W)        | 0.084        |
+| Dynamic (W)              | 0.002        |
+| Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 84.6         |
-| Junction Temperature (C) | 25.4         |
+| Max Ambient (C)          | 84.5         |
+| Junction Temperature (C) | 25.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,16 +53,16 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.001 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |      252 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |       61 |     63400 |            0.10 |
-|   CARRY4                 |    <0.001 |       17 |     15850 |            0.11 |
-|   Register               |    <0.001 |      121 |    126800 |            0.10 |
+| Slice Logic              |    <0.001 |      184 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |       49 |     63400 |            0.08 |
+|   CARRY4                 |    <0.001 |        8 |     15850 |            0.05 |
+|   Register               |    <0.001 |       91 |    126800 |            0.07 |
 |   Others                 |     0.000 |        7 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |       21 |     19000 |            0.11 |
-| Signals                  |    <0.001 |      186 |       --- |             --- |
+| Signals                  |    <0.001 |      150 |       --- |             --- |
 | I/O                      |    <0.001 |       17 |       210 |            8.10 |
-| Static Power             |     0.084 |          |           |                 |
-| Total                    |     0.085 |          |           |                 |
+| Static Power             |     0.097 |          |           |                 |
+| Total                    |     0.099 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.016 |       0.001 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.017 |       0.002 |      0.015 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -141,7 +141,7 @@ Table of Contents
 +---------+-----------+
 | Name    | Power (W) |
 +---------+-----------+
-| stepper |     0.001 |
+| stepper |     0.002 |
 +---------+-----------+
 
 
