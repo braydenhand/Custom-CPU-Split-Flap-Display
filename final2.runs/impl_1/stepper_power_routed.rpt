@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Wed Nov 20 15:21:14 2024
+| Date             : Wed Nov 20 15:46:39 2024
 | Host             : P1-03 running 64-bit major release  (build 9200)
 | Command          : report_power -file stepper_power_routed.rpt -pb stepper_power_summary_routed.pb -rpx stepper_power_routed.rpx
 | Design           : stepper
@@ -54,7 +54,7 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.001 |        3 |       --- |             --- |
 | Slice Logic              |    <0.001 |      193 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |       51 |     63400 |            0.08 |
+|   LUT as Logic           |    <0.001 |       50 |     63400 |            0.08 |
 |   CARRY4                 |    <0.001 |        8 |     15850 |            0.05 |
 |   Register               |    <0.001 |       98 |    126800 |            0.08 |
 |   Others                 |     0.000 |        7 |       --- |             --- |

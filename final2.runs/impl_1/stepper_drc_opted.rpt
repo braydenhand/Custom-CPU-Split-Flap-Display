@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Nov 20 15:20:53 2024
+| Date         : Wed Nov 20 15:46:17 2024
 | Host         : P1-03 running 64-bit major release  (build 9200)
 | Command      : report_drc -file stepper_drc_opted.rpt -pb stepper_drc_opted.pb -rpx stepper_drc_opted.rpx
 | Design       : stepper

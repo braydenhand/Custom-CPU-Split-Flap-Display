@@ -66,7 +66,7 @@ module stepper(
             end 
             if (data_delay == 10'b1) begin // timer is done
                 data_delay = 10'b0; // reset timer
-                if (posData != 7'b0) begin
+                if (posData != 7'b0 && !BTNR ) begin
                     target <= posData; //get the key position
                 end
                     
@@ -75,6 +75,7 @@ module stepper(
         end
         if (BTNR) begin
             // Reset logic when button is pressed
+            target <= 0;
             
             count <= 20'b0;  
             current <= 31'b0; // zero out current pos
@@ -99,7 +100,7 @@ module stepper(
                 current <= 32'b0;
             end
         end else if (init) begin
-
+//            posData = 6'b0;
             count <= count + 1;
             // FSM: Update control state based on count
             if (count == 19'b1111111111111111111 && current != target) begin
