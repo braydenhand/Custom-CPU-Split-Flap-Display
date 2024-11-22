@@ -79,13 +79,13 @@ module stepper(
 //            target <= 0;
             
             count <= 20'b0;  
-            current <= 31'b0; // zero out current pos
+            current <= 32'b0; // zero out current pos
             control <= 4'b1010; // Initial control state
             init <= 1'b0;
         end else if (!init) begin
             // Initialize position to zero if the magnet is found
             count <= count + 1;
-            if (JB[1] == 1) begin // Magnet found, zero out position
+            if (JB[1] == 1) begin // Magnet not found
                 if (count == 20'b11111111111111111111) begin
                     // State transitions
                     case (control)

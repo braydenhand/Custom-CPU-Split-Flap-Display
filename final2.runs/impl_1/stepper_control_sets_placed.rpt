@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Nov 20 15:46:20 2024
+| Date         : Thu Nov 21 15:22:39 2024
 | Host         : P1-03 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file stepper_control_sets_placed.rpt
 | Design       : stepper
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              31 |           14 |
+| No           | No                    | No                     |              31 |            9 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |              31 |            9 |
-| Yes          | No                    | No                     |              18 |            6 |
+| Yes          | No                    | No                     |              25 |            7 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              18 |            5 |
+| Yes          | Yes                   | No                     |              11 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -78,11 +78,11 @@ Table of Contents
 |  CLK100MHZ_IBUF_BUFG |                    | ps2/data_inter0     |                1 |              4 |         4.00 |
 |  CLK100MHZ_IBUF_BUFG | ps2/shift_frame    | ps2/reset_bit_count |                1 |              4 |         4.00 |
 |  CLK100MHZ_IBUF_BUFG | ps2/load_rx_data   |                     |                2 |              7 |         3.50 |
-|  CLK100MHZ_IBUF_BUFG | ScanCode/E[0]      | BTNR_IBUF           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | ScanCode/E[0]      |                     |                2 |              7 |         3.50 |
 |  CLK100MHZ_IBUF_BUFG | current[7]_i_2_n_0 | current[7]_i_1_n_0  |                2 |              7 |         3.50 |
-|  CLK100MHZ_IBUF_BUFG | ps2/shift_frame    |                     |                3 |             10 |         3.33 |
+|  CLK100MHZ_IBUF_BUFG | ps2/shift_frame    |                     |                2 |             10 |         5.00 |
 |  CLK100MHZ_IBUF_BUFG |                    | BTNR_IBUF           |                7 |             23 |         3.29 |
-|  CLK100MHZ_IBUF_BUFG |                    |                     |               20 |             52 |         2.60 |
+|  CLK100MHZ_IBUF_BUFG |                    |                     |               15 |             52 |         3.47 |
 +----------------------+--------------------+---------------------+------------------+----------------+--------------+
 
 

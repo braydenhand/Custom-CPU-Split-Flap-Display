@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Nov 20 15:45:43 2024
+| Date         : Thu Nov 21 15:22:10 2024
 | Host         : P1-03 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file stepper_utilization_synth.rpt -pb stepper_utilization_synth.pb
 | Design       : stepper
@@ -153,7 +153,7 @@ Table of Contents
 | OBUF     |   20 |                  IO |
 | LUT4     |   19 |                 LUT |
 | RAMS32   |   14 |  Distributed Memory |
-| LUT2     |    8 |                 LUT |
+| LUT2     |    9 |                 LUT |
 | CARRY4   |    8 |          CarryLogic |
 | RAMS64E  |    7 |  Distributed Memory |
 | LUT3     |    6 |                 LUT |
