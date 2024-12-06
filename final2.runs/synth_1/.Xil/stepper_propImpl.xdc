@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/bkh18/Downloads/lab3_kit/lab3_kit/master.xdc rfile:../../../../Downloads/lab3_kit/lab3_kit/master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/bkh18/ece350-newfinal/master.xdc rfile:../../../master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { CLK100MHZ }]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
 set_property src_info {type:XDC file:1 line:30 export:INPUT save:INPUT read:READ} [current_design]
@@ -45,9 +45,7 @@ set_property src_info {type:XDC file:1 line:87 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN G17   IOSTANDARD LVCMOS33 } [get_ports { JA[4] }]; #IO_L18N_T2_A23_15 Sch=ja[4]
 set_property src_info {type:XDC file:1 line:94 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN D14   IOSTANDARD LVCMOS33 } [get_ports { JB[1] }]; #IO_L1P_T0_AD0P_15 Sch=jb[1]
-set_property src_info {type:XDC file:1 line:191 export:INPUT save:INPUT read:READ} [current_design]
-// PS2 Stuff
-set_property src_info {type:XDC file:1 line:192 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:1 line:212 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN F4 [get_ports ps2_clk]
-set_property src_info {type:XDC file:1 line:193 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:1 line:213 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN B2 [get_ports ps2_data]

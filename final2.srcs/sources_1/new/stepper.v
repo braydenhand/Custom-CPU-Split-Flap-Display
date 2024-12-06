@@ -7,18 +7,19 @@ module stepper(
     inout ps2_clk,
     inout ps2_data
     );
-    
+    reg [9:0] data_delay;
     reg [31:0] target; 
     reg init;
     reg [31:0] current; 
     reg accept_new_key;
-    reg [19:0] count;
+    reg [17:0] count;
     reg [3:0] control;
+    reg [24:0] check_target;
      // Lab Memory Files Location
-    localparam FILES_PATH = "C:/Users/bkh18/final2/";
+    localparam FILES_PATH = "C:/Users/bkh18/ece350-newfinal/";
     wire [7:0] scancode;
     wire read_data, busy, err;
-    wire [6:0] posData;
+    wire [9:0] posData;
     //
 
     PS2Interface ps2(
@@ -35,10 +36,10 @@ module stepper(
     ); 
     
     
-    wire [6:0] asciiData;
+    wire [9:0] asciiData;
     RAM #(
         .DEPTH(94),                               // Set depth to contain every ASCII character
-        .DATA_WIDTH(7),                           // Set data width for ASCII
+        .DATA_WIDTH(10),                           // Set data width for ASCII
         .ADDRESS_WIDTH($clog2(94) + 1),           // Set address width according to the ASCII count
         .MEMFILE({FILES_PATH, "lookup.mem"}))      // Memory initialization
     ScanCode(
@@ -46,17 +47,24 @@ module stepper(
         .addr(scancode),                          // Address from the PS/2 interface
         .dataOut(posData),                      // ASCII data output
         .wEn(1'b0));        
+ 
+assign JA = control;
+    assign LED = {posData};  // Fixed width to match LED[15:0]
 
-    // Assign control to both JA and LED outputs
-    // vincent said to do this, i really didn't want to but he said to, im gonna
-    assign JA = control;
-//    assign LED = {busy, read_data, target[3:0]};
-
-    assign LED = {posData[6:0], current[7:0]};
-    reg [9:0] data_delay;
-    // FSM logic
-    always @ (posedge CLK100MHZ) begin
-        if (!accept_new_key) begin // if you arent currently ready to accept input
+    always @(posedge CLK100MHZ) begin
+        // Add reset synchronization
+        if (BTNR) begin
+            check_target <= 25'b0;
+            count <= 18'b0;
+            current <= 32'b0;
+            control <= 4'b1010;
+            init <= 1'b0;
+            accept_new_key <= 1'b1;
+            data_delay <= 10'b0;
+            target <= 32'b0;
+        end
+        else begin
+      if (!accept_new_key) begin // if you arent currently ready to accept input
             if (!read_data) begin // button is let go
                 accept_new_key =1'b1; //accept new input
             end
@@ -67,57 +75,55 @@ module stepper(
             end 
             if (data_delay == 10'b1) begin // timer is done
                 data_delay = 10'b0; // reset timer
-                if (posData != 7'b0 && !BTNR ) begin
-                    target <= posData; //get the key position
+                if (posData != 10'b0 && !BTNR ) begin
+                    target = posData; //get the key position
                 end
                     
                 accept_new_key = 1'b0; // dont accept any more input until button is let go
             end
         end
-        if (BTNR) begin
-            // Reset logic when button is pressed
-//            target <= 0;
-            
-            count <= 20'b0;  
-            current <= 32'b0; // zero out current pos
-            control <= 4'b1010; // Initial control state
-            init <= 1'b0;
-        end else if (!init) begin
-            // Initialize position to zero if the magnet is found
-            count <= count + 1;
-            if (JB[1] == 1) begin // Magnet not found
-                if (count == 20'b11111111111111111111) begin
-                    // State transitions
-                    case (control)
-                        4'b1010: control <= 4'b0110;
-                        4'b0110: control <= 4'b0101;
-                        4'b0101: control <= 4'b1001;
-                        4'b1001: control <= 4'b1010;
-                    endcase         
+
+            // Initialization and stepping logic
+            if (!init) begin
+                count <= count + 1;
+                if (JB[1]) begin // Magnet not found
+                    if (count == 18'h3FFFF) begin  // Use proper comparison value
+                        case (control)
+                            4'b1010: control <= 4'b0110;
+                            4'b0110: control <= 4'b0101;
+                            4'b0101: control <= 4'b1001;
+                            4'b1001: control <= 4'b1010;
+                            default: control <= 4'b1010;
+                        endcase
+                        count <= 18'b0;  // Reset count after state change
+                    end
+                end 
+                else begin // Magnet found
+                    init <= 1'b1;
+                    current <= 32'b0;
                 end
-            end else begin
-                // Magnet found, proceed to initialization
-                init <= 1'b1;
-                current <= 32'b0;
-            end
-        end else if (init) begin
-//            posData = 6'b0;
-            count <= count + 1;
-            // FSM: Update control state based on count
-            if (count == 19'b1111111111111111111 && current != target) begin
-                // State transitions
-                case (control)
-                    4'b1010: control <= 4'b0110;
-                    4'b0110: control <= 4'b0101;
-                    4'b0101: control <= 4'b1001;
-                    4'b1001: control <= 4'b1010;
-                endcase
-                current = current + 1; // Increment step count
-                if (current >= 200) begin
-                    current = 32'b0;
+            end  
+            else begin // Normal operation
+                if (current != target) begin
+                    count <= count + 1;
+                    if (count == 18'h3FFFF) begin
+                        case (control)
+                            4'b1010: control <= 4'b0110;
+                            4'b0110: control <= 4'b0101;
+                            4'b0101: control <= 4'b1001;
+                            4'b1001: control <= 4'b1010;
+                            default: control <= 4'b1010;
+                        endcase
+                        count <= 18'b0;  // Reset count
+                        if (current < 731) begin  // Position limit check
+                            current <= current + 1;
+                        end
+                        else begin
+                            current <= 32'b0;
+                        end
+                    end
                 end
-               
             end
         end
-    end
+    end 
 endmodule

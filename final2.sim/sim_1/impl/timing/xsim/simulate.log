@@ -1,0 +1,10 @@
+Time resolution is 1 ps
+WARNING: File Test Files/Memory Files/final_test.mem referenced on C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/ROM.v at line 11 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+ 7321026188548460883941892924512892613525374463608450314
+WARNING: file Test Files/Verification Files/final_test_exp.txt could not be opened
+Couldn't read the expected file.
+Make sure there is a final_test_exp.txt file in the "Test Files/Verification Files/" directory.
+Continuing for 255 cycles without checking for correctness,
+
+
+WARNING: file Test Files/Output Files/final_test_actual.txt could not be opened

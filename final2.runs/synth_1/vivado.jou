@@ -2,11 +2,11 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Thu Nov 21 15:21:43 2024
-# Process ID: 11612
-# Current directory: C:/Users/bkh18/final2/final2.runs/synth_1
+# Start of session at: Fri Dec  6 14:21:32 2024
+# Process ID: 9892
+# Current directory: C:/Users/bkh18/ece350-newfinal/final2.runs/synth_1
 # Command line: vivado.exe -log stepper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source stepper.tcl
-# Log file: C:/Users/bkh18/final2/final2.runs/synth_1/stepper.vds
-# Journal file: C:/Users/bkh18/final2/final2.runs/synth_1\vivado.jou
+# Log file: C:/Users/bkh18/ece350-newfinal/final2.runs/synth_1/stepper.vds
+# Journal file: C:/Users/bkh18/ece350-newfinal/final2.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source stepper.tcl -notrace

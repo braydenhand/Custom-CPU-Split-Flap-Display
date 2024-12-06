@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/bkh18/final2/final2.runs/synth_1/stepper.tcl"
+  variable script "C:/Users/bkh18/ece350-newfinal/final2.runs/synth_1/stepper.tcl"
   variable category "vivado_synth"
 }
 
@@ -72,32 +72,93 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/bkh18/final2/final2.cache/wt [current_project]
-set_property parent.project_path C:/Users/bkh18/final2/final2.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/bkh18/ece350-newfinal/final2.cache/wt [current_project]
+set_property parent.project_path C:/Users/bkh18/ece350-newfinal/final2.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/bkh18/final2/final2.cache/ip [current_project]
+set_property ip_output_repo c:/Users/bkh18/ece350-newfinal/final2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_mem {
-  C:/Users/bkh18/Downloads/lab6-7_kit/lab6_kit/ascii.mem
-  C:/Users/bkh18/final2/lookup.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/lookup.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/bex.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/final_test.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/branch_mem_edge.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/memory.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/blt.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/mem_bypass.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/md_bypass.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/mem_edge.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/bne.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/exc.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/alu_bypass.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/mem_fbypass.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/multdiv.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/bex_bypass.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/except_bypass.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/branch_bypass.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/addi_basic.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/nop.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/jr.mem
 }
 read_verilog -library xil_defaultlib {
-  C:/Users/bkh18/Downloads/lab6-7_kit/lab6_kit/RAM.v
-  C:/Users/bkh18/final2/final2.srcs/sources_1/new/dff.v
-  C:/Users/bkh18/final2/final2.srcs/sources_1/new/fsm.v
-  C:/Users/bkh18/final2/final2.srcs/sources_1/new/stepper.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/new/dff.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/new/fsm.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/new/stepper.v
+  C:/Users/bkh18/ece350-newfinal/RAM.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_8_2.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/counter_32.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/register.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/alu.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/multdiv.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/RAM.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/tff.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/barrel_shifter.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/cla_adder_32.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/regfile.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/multdiv_tb_brady.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/shift16.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/shift8.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/comp_32.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/not_32.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_16.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/shift4.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_32.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/shift2.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/multdiv_tb.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/shift1.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/mult_ctrl.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/ROM.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/counter.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/dffe_ref.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/or_32.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/full_adder.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/alu_tb.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/mult.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/div.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/comp_8.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/counter_tb.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_4.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/regfile_tb.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/cla_adder.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/Wrapper.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_2.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/comp_2.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_8.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/and_32.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_32_bus.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/Downloads/Wrapper_timing.v
 }
-read_vhdl -library xil_defaultlib C:/Users/bkh18/Downloads/lab6-7_kit/lab6_kit/Ps2Interface.vhd
+read_vhdl -library xil_defaultlib C:/Users/bkh18/ece350-newfinal/Ps2Interface.vhd
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -107,8 +168,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/bkh18/Downloads/lab3_kit/lab3_kit/master.xdc
-set_property used_in_implementation false [get_files C:/Users/bkh18/Downloads/lab3_kit/lab3_kit/master.xdc]
+read_xdc C:/Users/bkh18/ece350-newfinal/master.xdc
+set_property used_in_implementation false [get_files C:/Users/bkh18/ece350-newfinal/master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

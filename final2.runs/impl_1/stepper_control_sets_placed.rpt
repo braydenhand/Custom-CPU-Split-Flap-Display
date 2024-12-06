@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Thu Nov 21 15:22:39 2024
-| Host         : P1-03 running 64-bit major release  (build 9200)
+| Date         : Fri Dec  6 14:22:28 2024
+| Host         : P1-05 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file stepper_control_sets_placed.rpt
 | Design       : stepper
 | Device       : xc7a100t
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    10 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    30 |
+| Unused register locations in slices containing registers |    46 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -40,11 +40,11 @@ Table of Contents
 |       Fanout       | Count |
 +--------------------+-------+
 | Total control sets |    10 |
-| >= 0 to < 4        |     1 |
-| >= 4 to < 6        |     3 |
-| >= 6 to < 8        |     3 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     1 |
 | >= 8 to < 10       |     0 |
-| >= 10 to < 12      |     1 |
+| >= 10 to < 12      |     3 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
 | >= 16              |     2 |
@@ -58,31 +58,31 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              31 |            9 |
+| No           | No                    | No                     |              18 |           11 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              31 |            9 |
-| Yes          | No                    | No                     |              25 |            7 |
+| No           | Yes                   | No                     |              19 |            7 |
+| Yes          | No                    | No                     |              17 |            4 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              11 |            3 |
+| Yes          | Yes                   | No                     |              36 |           10 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------------+--------------------+---------------------+------------------+----------------+--------------+
-|     Clock Signal     |    Enable Signal   |   Set/Reset Signal  | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------------+--------------------+---------------------+------------------+----------------+--------------+
-|  CLK100MHZ_IBUF_BUFG | current[7]_i_2_n_0 |                     |                1 |              1 |         1.00 |
-|  CLK100MHZ_IBUF_BUFG |                    | ps2/clk_inter0      |                1 |              4 |         4.00 |
-|  CLK100MHZ_IBUF_BUFG |                    | ps2/data_inter0     |                1 |              4 |         4.00 |
-|  CLK100MHZ_IBUF_BUFG | ps2/shift_frame    | ps2/reset_bit_count |                1 |              4 |         4.00 |
-|  CLK100MHZ_IBUF_BUFG | ps2/load_rx_data   |                     |                2 |              7 |         3.50 |
-|  CLK100MHZ_IBUF_BUFG | ScanCode/E[0]      |                     |                2 |              7 |         3.50 |
-|  CLK100MHZ_IBUF_BUFG | current[7]_i_2_n_0 | current[7]_i_1_n_0  |                2 |              7 |         3.50 |
-|  CLK100MHZ_IBUF_BUFG | ps2/shift_frame    |                     |                2 |             10 |         5.00 |
-|  CLK100MHZ_IBUF_BUFG |                    | BTNR_IBUF           |                7 |             23 |         3.29 |
-|  CLK100MHZ_IBUF_BUFG |                    |                     |               15 |             52 |         3.47 |
-+----------------------+--------------------+---------------------+------------------+----------------+--------------+
++----------------------+------------------------+---------------------+------------------+----------------+--------------+
+|     Clock Signal     |      Enable Signal     |   Set/Reset Signal  | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------+------------------------+---------------------+------------------+----------------+--------------+
+|  CLK100MHZ_IBUF_BUFG |                        | ps2/data_inter0     |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG |                        | ps2/clk_inter0      |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | ps2/shift_frame        | ps2/reset_bit_count |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | ScanCode/init_reg_0[0] | BTNR_IBUF           |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | ps2/load_rx_data       |                     |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | ps2/shift_frame        |                     |                3 |             10 |         3.33 |
+|  CLK100MHZ_IBUF_BUFG | ScanCode/E[0]          | ScanCode/SR[0]      |                3 |             10 |         3.33 |
+|  CLK100MHZ_IBUF_BUFG |                        | BTNR_IBUF           |                5 |             11 |         2.20 |
+|  CLK100MHZ_IBUF_BUFG |                        |                     |               11 |             18 |         1.64 |
+|  CLK100MHZ_IBUF_BUFG | ScanCode/init_reg[0]   | BTNR_IBUF           |                5 |             18 |         3.60 |
++----------------------+------------------------+---------------------+------------------+----------------+--------------+
 
 
