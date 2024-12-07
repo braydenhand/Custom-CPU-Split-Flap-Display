@@ -47,7 +47,9 @@ module processor(
     ctrl_readRegB,                  // O: Register to read from port B of RegFile
     data_writeReg,                  // O: Data to write to for RegFile
     data_readRegA,                  // I: Data from port A of RegFile
-    data_readRegB                   // I: Data from port B of RegFile
+    data_readRegB,                   // I: Data from port B of RegFile
+    
+    LED
 	 
 	);
 	
@@ -77,8 +79,11 @@ module processor(
 	output [4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
 	output [31:0] data_writeReg;
 	input [31:0] data_readRegA, data_readRegB;
+	
+	output reg [15:0] LED;
 
 	/* YOUR CODE STARTS HERE */
+	
 
 
     // PC ////////////////////////////////////////////////////////
@@ -375,7 +380,10 @@ wire [31:0] alu_b_bypass =
     // todo: pass inouts from board to top level module and all the way down
     stepper stepper1(CLK100MHZ, BTNR, JB, JA, ps2_clk, ps2_data,(curr_reel == 3'b000),update[0]);
     
-
+    
+    always @(posedge clock) begin
+        LED <= 16'b1;
+    end
 
 	/* END CODE */
 

@@ -144,7 +144,6 @@ OPTRACE "add files" START { }
   add_files -quiet C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.runs/impl_1/stepper_opt.dcp
   add_files -quiet C:/Users/bkh18/ece350-newfinal/final2.sim/sim_1/impl/timing/xsim/stepper_placed.dcp
   add_files -quiet C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.runs/impl_1/stepper_placed.dcp
-  add_files -quiet C:/Users/bkh18/ece350-newfinal/final2.ip_user_files/mem_init_files/stepper_routed.dcp
   add_files -quiet C:/Users/bkh18/ece350-newfinal/final2.sim/sim_1/impl/timing/xsim/stepper.dcp
   add_files -quiet C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.runs/impl_1/stepper_physopt.dcp
   add_files -quiet C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.runs/synth_1/stepper.dcp

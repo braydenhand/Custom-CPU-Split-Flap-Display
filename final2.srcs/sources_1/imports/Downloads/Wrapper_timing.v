@@ -53,13 +53,13 @@ module Wrapper (
            SW_Q <= SW_M; 
        end
        
-       always @(posedge clock) begin
-           if (io_write == 1'b1) begin
-               LED <= memDataIn[15:0];
-           end else begin
-               LED <= LED;
-           end
-       end
+//       always @(posedge clock) begin
+//           if (io_write == 1'b1) begin
+//               LED <= memDataIn[15:0];
+//           end else begin
+//               LED <= LED;
+//           end
+//       end
     assign q_dmem = (io_read == 1'b1) ? SW_Q : memDataOut;
 	// ADD YOUR MEMORY FILE HERE
 	localparam INSTR_FILE = "final_test";
@@ -77,7 +77,12 @@ module Wrapper (
 	always @(posedge clock) begin
 	   clk_div = clk_div + 1; 
 	   if (clk_div) cpu_clock = ~cpu_clock;
+	   LED <= LED_wire;
     end
+    
+    wire [15:0] LED_wire;
+    
+    
 	// Main Processing Unit
 	processor CPU(.clock(cpu_clock), .reset(reset), 
 								
@@ -96,7 +101,11 @@ module Wrapper (
 		// stepper
 		.BTNR(BTNR), .JB(JB),
 		.JA(JA), .ps2_clk(ps2_clk),
-		.ps2_data(ps2_data)
+		.ps2_data(ps2_data),
+		
+		.LED(LED_wire)
+		
+		
 		
 		); 
 	
