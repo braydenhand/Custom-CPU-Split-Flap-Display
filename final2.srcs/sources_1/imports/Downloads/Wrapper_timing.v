@@ -23,10 +23,15 @@
  * For example, you would add sample inside of the quotes on line 38 after assembling sample.s
  *
  **/
-
+ 
 module Wrapper (
     input clk_100mhz,
-    input BTNU, 
+    input BTNU, BTNR,
+    input [1:0] JB,
+    input [4:1] JA,
+    inout ps2_clk,
+    inout ps2_data,
+    
     input [15:0] SW,
     output reg [15:0] LED);
     wire clock, reset;
@@ -59,8 +64,22 @@ module Wrapper (
 	// ADD YOUR MEMORY FILE HERE
 	localparam INSTR_FILE = "final_test";
 	
+//	 BTNR,
+//    JB,
+//    JA,
+//    ps2_clk,
+//    ps2_data,
+	
+	
+	reg clk_div;
+	reg cpu_clock; 
+	
+	always @(posedge clock) begin
+	   clk_div = clk_div + 1; 
+	   if (clk_div) cpu_clock = ~cpu_clock;
+    end
 	// Main Processing Unit
-	processor CPU(.clock(clock), .reset(reset), 
+	processor CPU(.clock(cpu_clock), .reset(reset), 
 								
 		// ROM
 		.address_imem(instAddr), .q_imem(instData),
@@ -72,7 +91,14 @@ module Wrapper (
 									
 		// RAM
 		.wren(mwe), .address_dmem(memAddr), 
-		.data(memDataIn), .q_dmem(q_dmem)); 
+		.data(memDataIn), .q_dmem(q_dmem),
+		
+		// stepper
+		.BTNR(BTNR), .JB(JB),
+		.JA(JA), .ps2_clk(ps2_clk),
+		.ps2_data(ps2_data)
+		
+		); 
 	
 	// Instruction Memory (ROM)
 	ROM #(.MEMFILE({INSTR_FILE, ".mem"}))

@@ -3,9 +3,10 @@ module stepper(
     input BTNR, 
     input [1:0] JB,
     output [4:1] JA,
-    output [15:0] LED,
     inout ps2_clk,
-    inout ps2_data
+    inout ps2_data,
+    input my_turn,
+    output wire i_updated_wire
     );
     reg [9:0] data_delay;
     reg [31:0] target; 
@@ -15,9 +16,13 @@ module stepper(
     reg [17:0] count;
     reg [3:0] control;
     reg [24:0] check_target;
+    
+    reg i_updated;
+    
+    assign i_updated_wire = i_updated;
      // Lab Memory Files Location
     localparam FILES_PATH = "C:/Users/bkh18/ece350-newfinal/";
-    wire [7:0] scancode;
+   
     wire read_data, busy, err;
     wire [9:0] posData;
     //
@@ -50,7 +55,6 @@ module stepper(
  
 assign JA = control;
     assign LED = {current[15:0]};  // width to match LED[15:0]
-
     always @(posedge CLK100MHZ) begin
         // Add reset synchronization
         if (BTNR) begin
@@ -67,6 +71,7 @@ assign JA = control;
       if (!accept_new_key) begin // if you arent currently ready to accept input
             if (!read_data) begin // button is let go
                 accept_new_key =1'b1; //accept new input
+                i_updated = 1'b0;
             end
         end
         if (read_data && accept_new_key) begin // if we press a button and we arent currently processing a button
@@ -77,6 +82,7 @@ assign JA = control;
                 data_delay = 10'b0; // reset timer
                 if (posData != 10'b0 && !BTNR ) begin
                     target = posData; //get the key position
+                    i_updated = 1'b1;
                 end
                     
                 accept_new_key = 1'b0; // dont accept any more input until button is let go

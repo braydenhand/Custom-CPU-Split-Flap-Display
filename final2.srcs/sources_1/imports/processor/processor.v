@@ -17,7 +17,15 @@
  *
  *
  */
+ 
+
 module processor(
+    BTNR,
+    JB,
+    JA,
+    ps2_clk,
+    ps2_data,
+    
     // Control signals
     clock,                          // I: The master clock
     reset,                          // I: A reset signal
@@ -42,6 +50,16 @@ module processor(
     data_readRegB                   // I: Data from port B of RegFile
 	 
 	);
+	
+	
+	input BTNR;
+	
+	input [1:0] JB;
+	input [4:1] JA;
+	inout ps2_clk;
+	inout ps2_data;
+	 
+	
 
 	// Control signals
 	input clock, reset;
@@ -342,6 +360,21 @@ wire [31:0] alu_b_bypass =
 
 
 
+////////////////////////////////              STEPPERS                /////////////////////////////////////////////////////////////////////
+
+    reg [2:0] curr_reel; 
+    wire [5:0] update;
+    always @(posedge CLK100MHZ) begin
+        if ((curr_reel == 3'b000 && update[0]) ||
+        (curr_reel == 3'b001 && update[1]) || 
+        (curr_reel == 3'b010 && update[2])) begin
+        curr_reel = curr_reel + 1;
+        end
+    end
+
+    // todo: pass inouts from board to top level module and all the way down
+    stepper stepper1(CLK100MHZ, BTNR, JB, JA, ps2_clk, ps2_data,(curr_reel == 3'b000),update[0]);
+    
 
 
 	/* END CODE */

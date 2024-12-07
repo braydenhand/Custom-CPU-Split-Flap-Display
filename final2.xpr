@@ -91,24 +91,6 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/new/dff.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../fsm/fsm.srcs/sources_1/new/dff.v"/>
-          <Attr Name="ImportTime" Val="1730470963"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/fsm.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../fsm/fsm.srcs/sources_1/new/fsm.v"/>
-          <Attr Name="ImportTime" Val="1730474779"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/new/stepper.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../fsm/fsm.srcs/sources_1/new/stepper.v"/>
@@ -129,22 +111,6 @@
       <File Path="$PPRDIR/Ps2Interface.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/RAM.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/alu/mux_8_2.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/regfile/alu/mux_8_2.v"/>
-          <Attr Name="ImportTime" Val="1728336786"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -193,15 +159,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/RAM.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/RAM.v"/>
-          <Attr Name="ImportTime" Val="1729025066"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/tff.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/tff.v"/>
@@ -238,15 +195,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/multdiv_tb_brady.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/multdiv_tb_brady.v"/>
-          <Attr Name="ImportTime" Val="1728330322"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/alu/shift16.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/regfile/alu/shift16.v"/>
@@ -260,15 +208,6 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/regfile/alu/shift8.v"/>
           <Attr Name="ImportTime" Val="1726420924"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/alu/comp_32.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/regfile/alu/comp_32.v"/>
-          <Attr Name="ImportTime" Val="1726424478"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -319,15 +258,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/multdiv_tb.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/multdiv_tb.v"/>
-          <Attr Name="ImportTime" Val="1727891560"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/alu/shift1.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/regfile/alu/shift1.v"/>
@@ -341,15 +271,6 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/mult_ctrl.v"/>
           <Attr Name="ImportTime" Val="1730142990"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/ROM.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/ROM.v"/>
-          <Attr Name="ImportTime" Val="1729025066"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -391,25 +312,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/Wrapper_tb.v">
-        <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/Wrapper_tb.v"/>
-          <Attr Name="ImportTime" Val="1731099194"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/alu/alu_tb.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/regfile/alu/alu_tb.v"/>
-          <Attr Name="ImportTime" Val="1726421662"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/mult.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/regfile/mult.v"/>
@@ -428,46 +330,10 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/alu/comp_8.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/regfile/alu/comp_8.v"/>
-          <Attr Name="ImportTime" Val="1726424334"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/counter_tb.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/counter_tb.v"/>
-          <Attr Name="ImportTime" Val="1727453106"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/alu/decoder.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/regfile/alu/decoder.v"/>
           <Attr Name="ImportTime" Val="1726423466"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/alu/mux_4.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/regfile/alu/mux_4.v"/>
-          <Attr Name="ImportTime" Val="1725037496"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/regfile_tb.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/regfile/regfile_tb.v"/>
-          <Attr Name="ImportTime" Val="1727121640"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -482,55 +348,10 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/Wrapper.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/Wrapper.v"/>
-          <Attr Name="ImportTime" Val="1729702486"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/alu/mux_2.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/regfile/alu/mux_2.v"/>
-          <Attr Name="ImportTime" Val="1726416522"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/alu/comp_2.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/regfile/alu/comp_2.v"/>
-          <Attr Name="ImportTime" Val="1728336776"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/alu/mux_8.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/regfile/alu/mux_8.v"/>
-          <Attr Name="ImportTime" Val="1728336794"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/alu/and_32.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/regfile/alu/and_32.v"/>
           <Attr Name="ImportTime" Val="1726523688"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/alu/mux_32_bus.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/cpu/cpu/processor/multdiv/regfile/alu/mux_32_bus.v"/>
-          <Attr Name="ImportTime" Val="1727125944"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -697,9 +518,116 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/alu/mux_2.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PIPUSERFILESDIR/mem_init_files/stepper.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/alu/mux_4.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSIMDIR/sim_1/impl/timing/xsim/stepper_physopt.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/ece350-newfinal/final2.runs/impl_1/stepper_opt.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSIMDIR/sim_1/impl/timing/xsim/stepper_placed.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/processor/multdiv/regfile/alu/mux_8.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/ece350-newfinal/final2.runs/impl_1/stepper_placed.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSIMDIR/sim_1/impl/timing/xsim/stepper.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/ece350-newfinal/final2.runs/impl_1/stepper_physopt.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/ece350-newfinal/final2.runs/synth_1/stepper.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PIPUSERFILESDIR/mem_init_files/stepper_placed.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSIMDIR/sim_1/impl/timing/xsim/stepper_opt.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PIPUSERFILESDIR/mem_init_files/stepper_physopt.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PIPUSERFILESDIR/mem_init_files/stepper_opt.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/processor/ROM.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/RAM.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="stepper"/>
+        <Option Name="TopModule" Val="Wrapper"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -1133,15 +1061,6 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/fsm.v"/>
           <Attr Name="ImportTime" Val="1732288150"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/Wrapper_tb.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/imports/processor/Wrapper_tb.v"/>
-          <Attr Name="ImportTime" Val="1731099194"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -1745,7 +1664,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="Wrapper_tb"/>
+        <Option Name="TopModule" Val="Wrapper"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
