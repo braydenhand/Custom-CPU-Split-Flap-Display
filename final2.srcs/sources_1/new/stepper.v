@@ -49,7 +49,7 @@ module stepper(
         .wEn(1'b0));        
  
 assign JA = control;
-    assign LED = {posData};  // Fixed width to match LED[15:0]
+    assign LED = {current[15:0]};  // width to match LED[15:0]
 
     always @(posedge CLK100MHZ) begin
         // Add reset synchronization
@@ -87,7 +87,7 @@ assign JA = control;
             if (!init) begin
                 count <= count + 1;
                 if (JB[1]) begin // Magnet not found
-                    if (count == 18'h3FFFF) begin  // Use proper comparison value
+                    if (count == 18'h3FFFF) begin  
                         case (control)
                             4'b1010: control <= 4'b0110;
                             4'b0110: control <= 4'b0101;
@@ -115,7 +115,7 @@ assign JA = control;
                             default: control <= 4'b1010;
                         endcase
                         count <= 18'b0;  // Reset count
-                        if (current < 731) begin  // Position limit check
+                        if (current < 800) begin  // Position limit check
                             current <= current + 1;
                         end
                         else begin
