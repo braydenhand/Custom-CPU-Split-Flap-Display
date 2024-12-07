@@ -57,7 +57,7 @@ module processor(
 	input BTNR;
 	
 	input [1:0] JB;
-	input [4:1] JA;
+	output [4:1] JA;
 	inout ps2_clk;
 	inout ps2_data;
 	 
