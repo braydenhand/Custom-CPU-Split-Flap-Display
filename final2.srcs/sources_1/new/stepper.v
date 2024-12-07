@@ -6,7 +6,8 @@ module stepper(
     inout ps2_clk,
     inout ps2_data,
     input my_turn,
-    output wire i_updated_wire
+    output wire i_updated_wire,
+    output reg [15:0] LED
     );
     reg [9:0] data_delay;
     reg [31:0] target; 
@@ -26,6 +27,8 @@ module stepper(
     wire read_data, busy, err;
     wire [9:0] posData;
     //
+    
+    
 
     PS2Interface ps2(
         .ps2_clk(ps2_clk),
@@ -53,8 +56,15 @@ module stepper(
         .dataOut(posData),                      // ASCII data output
         .wEn(1'b0));        
  
+
+ 
+ always @(posedge CLK100MHZ) begin
+    LED <= 16'b111111;
+end
+ 
+ 
 assign JA = control;
-    assign LED = {current[15:0]};  // width to match LED[15:0]
+//    assign LED = {current[15:0]};  // width to match LED[15:0]
     always @(posedge CLK100MHZ) begin
         // Add reset synchronization
         if (BTNR) begin

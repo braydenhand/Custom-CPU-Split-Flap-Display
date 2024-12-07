@@ -81,6 +81,7 @@ module processor(
 	input [31:0] data_readRegA, data_readRegB;
 	
 	output reg [15:0] LED;
+	wire [15:0] LED_wire;
 
 	/* YOUR CODE STARTS HERE */
 	
@@ -378,11 +379,12 @@ wire [31:0] alu_b_bypass =
     end
 
     // todo: pass inouts from board to top level module and all the way down
-    stepper stepper1(CLK100MHZ, BTNR, JB, JA, ps2_clk, ps2_data,(curr_reel == 3'b000),update[0]);
+    stepper stepper1(CLK100MHZ, BTNR, JB, JA, ps2_clk, ps2_data,(curr_reel == 3'b000),update[0], LED_wire);
     
     
     always @(posedge clock) begin
-        LED <= 16'b1;
+//        LED <= 16'b1;
+        LED <= LED_wire;
     end
 
 	/* END CODE */
