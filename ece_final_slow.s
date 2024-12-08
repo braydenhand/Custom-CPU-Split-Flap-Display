@@ -28,7 +28,7 @@ nop
 addi $r7, $r7, 1 # r7 += 1
 nop
 nop
-blt $r8, $r7, wait # while r7 < 50,000,000, go back to wait
+blt $r7, $r8, wait # while r7 < 50,000,000, go back to wait
 nop
 nop
 
@@ -62,7 +62,7 @@ nop
 addi $r7, $r7, 1 # r7 += 1
 nop
 nop
-blt $r8, $r7, wait2 # while r7 < 50,000,000, go back to wait
+blt $r7, $r8, wait2 # while r7 < 50,000,000, go back to wait
 nop
 nop
 
@@ -96,7 +96,7 @@ nop
 addi $r7, $r7, 1 # r7 += 1
 nop
 nop
-blt $r8, $r7, wait3 # while r7 < 50,000,000, go back to wait
+blt $r7, $r8, wait3 # while r7 < 50,000,000, go back to wait
 nop
 nop
 
@@ -130,7 +130,7 @@ nop
 addi $r7, $r7, 1 # r7 += 1
 nop
 nop
-blt $r8, $r7, wait4 # while r7 < 50,000,000, go back to wait
+blt $r7, $r8, wait4 # while r7 < 50,000,000, go back to wait
 nop
 nop
 
@@ -164,7 +164,7 @@ nop
 addi $r7, $r7, 1 # r7 += 1
 nop
 nop
-blt $r9, $r7, smallwait1 # while r7 < 5,000,000, go back to wait
+blt $r7, $r9, smallwait1 # while r7 < 5,000,000, go back to wait
 nop
 nop
 
@@ -202,7 +202,7 @@ nop
 addi $r7, $r7, 1 # r7 += 1
 nop
 nop
-blt $r9, $r7, smallwait3 # while r7 < 5,000,000, go back to wait
+blt $r7, $r9, smallwait3 # while r7 < 5,000,000, go back to wait
 nop
 nop
 
@@ -218,11 +218,11 @@ nop
 addi $r7, $r7, 1 # r7 += 1
 nop
 nop
-blt $r8, $r7, wait4 # while r7 < 5,000,000, go back to wait
+blt $r7, $r8, wait4 # while r7 < 5,000,000, go back to wait
 nop
 nop
 
-blt $r11, $r10, repeat # repeat this little animation 20 times
+blt $r10, $r11, repeat # repeat this little animation 20 times
 nop
 nop
 
