@@ -88,22 +88,16 @@ assign JA = control;
             target <= 32'b0;
         end
         else begin
-          if (!accept_new_key) begin // if you arent currently ready to accept input
-                if (!read_data) begin // button is let go
-                    accept_new_key =1'b1; //accept new input
-                end
+            if (!read_data) begin // button is let go
+                accept_new_key =1'b1; //accept new input
             end
-            if (read_data && accept_new_key) begin // if we press a button and we arent currently processing a button
+            else if (read_data && accept_new_key) begin // if we press a button and we arent currently processing a button
                 if (data_delay != 10'b1) begin // start a timer
                         data_delay = data_delay + 1; // wait till its done
                 end 
                 if (data_delay == 10'b1) begin // timer is done
                     data_delay = 10'b0; // reset timer
-                    if (1'b1)begin
-//                        target = curr_reg; // check this
-                    end
-//                    if (1'b1) begin // magic number that we set all our registers to so we know we are ready to take inputs
-                        else if (posData != 10'b0 && !BTNR && my_turn) begin
+                        if (posData != 10'b0 && !BTNR && my_turn) begin
                             target = posData; //get the key position
                         end
                         
