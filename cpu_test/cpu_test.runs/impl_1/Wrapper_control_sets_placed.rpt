@@ -1,0 +1,117 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Sat Dec  7 19:58:38 2024
+| Host         : P1-04 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Wrapper_control_sets_placed.rpt
+| Design       : Wrapper
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    39 |
+|    Minimum number of control sets                        |    39 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    30 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    39 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    35 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               4 |            3 |
+| No           | No                    | Yes                    |             230 |           83 |
+| No           | Yes                   | No                     |               5 |            2 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            1043 |          308 |
+| Yes          | Yes                   | No                     |              16 |            3 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+--------------------------------------+---------------------------------+------------------+----------------+--------------+
+|      Clock Signal     |             Enable Signal            |         Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------+--------------------------------------+---------------------------------+------------------+----------------+--------------+
+|  cpu_clock_BUFG       |                                      |                                 |                1 |              1 |         1.00 |
+|  clk_100mhz_IBUF_BUFG |                                      |                                 |                2 |              3 |         1.50 |
+|  clk_100mhz_IBUF_BUFG |                                      | CPU/pc/dff_loop[5].dff/q_reg_1  |                2 |              5 |         2.50 |
+| ~cpu_clock_BUFG       | CPU/am_md/dff_loop[0].dff/in_en0_0   | BTNU_IBUF                       |                3 |             14 |         4.67 |
+|  clk_100mhz_IBUF_BUFG | CPU/xm/dff_loop[64].dff/io_write     | CPU/xm/dff_loop[20].dff/q_reg_1 |                3 |             16 |         5.33 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en07_out  | BTNU_IBUF                       |                7 |             32 |         4.57 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en09_out  | BTNU_IBUF                       |               10 |             32 |         3.20 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en05_out  | BTNU_IBUF                       |                7 |             32 |         4.57 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en035_out | BTNU_IBUF                       |               11 |             32 |         2.91 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en0       | BTNU_IBUF                       |               18 |             32 |         1.78 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en011_out | BTNU_IBUF                       |               10 |             32 |         3.20 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en041_out | BTNU_IBUF                       |                5 |             32 |         6.40 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en027_out | BTNU_IBUF                       |                9 |             32 |         3.56 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en029_out | BTNU_IBUF                       |                7 |             32 |         4.57 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en033_out | BTNU_IBUF                       |                8 |             32 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en019_out | BTNU_IBUF                       |                8 |             32 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en021_out | BTNU_IBUF                       |                8 |             32 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en025_out | BTNU_IBUF                       |                5 |             32 |         6.40 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en031_out | BTNU_IBUF                       |                7 |             32 |         4.57 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en037_out | BTNU_IBUF                       |                6 |             32 |         5.33 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en045_out | BTNU_IBUF                       |               13 |             32 |         2.46 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en047_out | BTNU_IBUF                       |               11 |             32 |         2.91 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en01_out  | BTNU_IBUF                       |               11 |             32 |         2.91 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en023_out | BTNU_IBUF                       |                5 |             32 |         6.40 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en049_out | BTNU_IBUF                       |                8 |             32 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en053_out | BTNU_IBUF                       |               11 |             32 |         2.91 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en055_out | BTNU_IBUF                       |               11 |             32 |         2.91 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en039_out | BTNU_IBUF                       |                8 |             32 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en03_out  | BTNU_IBUF                       |                8 |             32 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en043_out | BTNU_IBUF                       |               22 |             32 |         1.45 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en013_out | BTNU_IBUF                       |               11 |             32 |         2.91 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en015_out | BTNU_IBUF                       |               15 |             32 |         2.13 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en051_out | BTNU_IBUF                       |                9 |             32 |         3.56 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en057_out | BTNU_IBUF                       |                9 |             32 |         3.56 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en017_out | BTNU_IBUF                       |                8 |             32 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/pw/dff_loop[38].dff/in_en059_out | BTNU_IBUF                       |                9 |             32 |         3.56 |
+| ~cpu_clock_BUFG       | CPU/dx/dff_loop[26].dff/q_reg_5      | BTNU_IBUF                       |               10 |             37 |         3.70 |
+|  cpu_clock_BUFG       |                                      | CPU/dx/dff_loop[25].dff/q_reg_7 |               23 |             74 |         3.22 |
+| ~cpu_clock_BUFG       |                                      | BTNU_IBUF                       |               60 |            156 |         2.60 |
++-----------------------+--------------------------------------+---------------------------------+------------------+----------------+--------------+
+
+

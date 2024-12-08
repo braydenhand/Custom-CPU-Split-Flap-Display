@@ -54,16 +54,16 @@ module Wrapper (
            SW_Q <= SW_M; 
        end
        
-//       always @(posedge clock) begin
-//           if (io_write == 1'b1) begin
-//               LED <= memDataIn[15:0];
-//           end else begin
-//               LED <= LED;
-//           end
-//       end
+    //   always @(posedge clock) begin
+    //       if (io_write == 1'b1) begin
+     //          LED <= memDataIn[15:0];
+    //       end else begin
+     //          LED <= LED;
+      //     end
+      // end
     assign q_dmem = (io_read == 1'b1) ? SW_Q : memDataOut;
 	// ADD YOUR MEMORY FILE HERE
-	localparam INSTR_FILE = "addi_basic";
+	localparam INSTR_FILE = "ece_final_slow";
 	
 //	 BTNR,
 //    JB,
@@ -72,21 +72,22 @@ module Wrapper (
 //    ps2_data,
 	
 	
-	reg clk_div;
+	reg [8:0] clk_div;
 	reg cpu_clock;
-	reg [30:0] ps2_check; 
 	always @(posedge clock) begin
 	   clk_div = clk_div + 1;
-	   if (!ps2_clk) begin
-	   ps2_check = ps2_check + 1; 
-	   end 
 	   
-	   if (clk_div) cpu_clock = ~cpu_clock;
-	   LED <= {LED_wire};
+	   if (clk_div == 9'b1) cpu_clock = ~cpu_clock;
+//	   LED <= {register1[13:0],LED_wire[0]};
+//	   LED <= {fd_op_test[4:0],LED_wire[0]};
+	   LED <= {LED_wire [15:0]};
+//	   LED <= {SW};
+
     end
     
     wire [15:0] LED_wire;
     
+    // hello
     
 	// Main Processing Unit
 	processor CPU(.stepper_clock(clk_100mhz), .clock(cpu_clock), .reset(reset), 
@@ -108,27 +109,46 @@ module Wrapper (
 		.JA1(JA1), .JA2(JA2), .ps2_clk(ps2_clk),
 		.ps2_data(ps2_data),
 		
-		.LED(LED_wire)
+		.LED(LED_wire),
+		.fd_op_test(fd_op_test),
 		
+		// Registers for stepper targets
+		.register1(register1),
+		.register2(register2),
 		
+		// switches for mode control
+        .SW(SW)		
 		
 		); 
+		
+		wire [4:0] fd_op_test;
 	
 	// Instruction Memory (ROM)
 	ROM #(.MEMFILE({INSTR_FILE, ".mem"}))
-	InstMem(.clk(clock), 
+	InstMem(.clk(cpu_clock), 
 		.addr(instAddr[11:0]), 
 		.dataOut(instData));
+		
+		
+	ROM #(.MEMFILE({INSTR_FILE, ".mem"}))
+	TestMem(.clk(cpu_clock), 
+		.addr(12'b000000000000), 
+		.dataOut(test_rom));
+		
+	wire [31:0] test_rom;
 	
+	
+	wire [31:0] register1; 
+	wire [31:0] register2;
 	// Register File
-	regfile RegisterFile(.clock(clock), 
+	regfile RegisterFile(.clock(cpu_clock), 
 		.ctrl_writeEnable(rwe), .ctrl_reset(reset), 
 		.ctrl_writeReg(rd),
 		.ctrl_readRegA(rs1), .ctrl_readRegB(rs2), 
-		.data_writeReg(rData), .data_readRegA(regA), .data_readRegB(regB));
+		.data_writeReg(rData), .data_readRegA(regA), .data_readRegB(regB), .register1(register1),.register2(register2));
 						
 	// Processor Memory (RAM)
-	RAM ProcMem(.clk(clock), 
+	RAM ProcMem(.clk(cpu_clock), 
 		.wEn(mwe), 
 		.addr(memAddr[11:0]), 
 		.dataIn(memDataIn), 

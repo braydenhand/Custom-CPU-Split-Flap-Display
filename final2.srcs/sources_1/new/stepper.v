@@ -8,7 +8,8 @@ module stepper(
     input my_turn,
     output wire i_updated_wire,
     output reg [15:0] LED,
-    input [31:0] curr_reg
+    input [31:0] curr_reg,
+    input [15:0] SW 
     );
     reg [9:0] data_delay;
     reg [31:0] target; 
@@ -62,6 +63,8 @@ module stepper(
     
  always @(posedge CLK100MHZ) begin
     LED = {target[15:0]};
+//    LED = {16'b1111111111111111};
+
 end
  
  
@@ -69,6 +72,10 @@ assign JA = control;
 //    assign LED = {current[15:0]};  // width to match LED[15:0]
     always @(posedge CLK100MHZ) begin
         i_updated = (scancode == 8'b01001100);
+        // do animation mode if SW[0] is on
+        if (SW[0]) target = curr_reg;
+//        else begin // else, get keyboard input
+
         // Add reset synchronization
         if (BTNR) begin
             check_target <= 25'b0;
@@ -81,26 +88,30 @@ assign JA = control;
             target <= 32'b0;
         end
         else begin
-      if (!accept_new_key) begin // if you arent currently ready to accept input
-            if (!read_data) begin // button is let go
-                accept_new_key =1'b1; //accept new input
+          if (!accept_new_key) begin // if you arent currently ready to accept input
+                if (!read_data) begin // button is let go
+                    accept_new_key =1'b1; //accept new input
+                end
             end
-        end
-        if (read_data && accept_new_key) begin // if we press a button and we arent currently processing a button
-            if (data_delay != 10'b1) begin // start a timer
-                    data_delay = data_delay + 1; // wait till its done
-            end 
-            if (data_delay == 10'b1) begin // timer is done
-                data_delay = 10'b0; // reset timer
-                //curr_reg == 32'b00100000000000000000000000000000
-//                if (1'b1) begin // magic number that we set all our registers to so we know we are ready to take inputs
-                    if (posData != 10'b0 && !BTNR && my_turn) begin
-                        target = posData; //get the key position
+            if (read_data && accept_new_key) begin // if we press a button and we arent currently processing a button
+                if (data_delay != 10'b1) begin // start a timer
+                        data_delay = data_delay + 1; // wait till its done
+                end 
+                if (data_delay == 10'b1) begin // timer is done
+                    data_delay = 10'b0; // reset timer
+                    if (1'b1)begin
+//                        target = curr_reg; // check this
                     end
-                    
-                accept_new_key = 1'b0; // dont accept any more input until button is let go
+//                    if (1'b1) begin // magic number that we set all our registers to so we know we are ready to take inputs
+                        else if (posData != 10'b0 && !BTNR && my_turn) begin
+                            target = posData; //get the key position
+                        end
+                        
+                    accept_new_key = 1'b0; // dont accept any more input until button is let go
+                end
             end
-        end
+//        end
+
 
             // Initialization and stepping logic
             if (!init) begin

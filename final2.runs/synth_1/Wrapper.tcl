@@ -72,6 +72,7 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -132,6 +133,7 @@ read_mem {
   C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/nop.mem
   C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/jr.mem
   C:/Users/bkh18/ece350-newfinal/ece_final.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/ece_final_slow.mem
 }
 read_verilog -library xil_defaultlib {
   C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/new/stepper.v
@@ -167,7 +169,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_4.v
   C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_8.v
   C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/processor/ROM.v
-  C:/Users/bkh18/ece350-newfinal/RAM.v
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/RAM.v
 }
 read_vhdl -library xil_defaultlib C:/Users/bkh18/ece350-newfinal/Ps2Interface.vhd
 OPTRACE "Adding files" END { }

@@ -51,7 +51,18 @@ module processor(
     data_readRegA,                  // I: Data from port A of RegFile
     data_readRegB,                   // I: Data from port B of RegFile
     
-    LED
+    // LED debugging
+    LED,
+    
+    // Making sure that we are sending opcodes
+    fd_op_test,
+    
+    // The registers that control targets of the units
+    register1,
+    register2,
+    
+    // Switches for mode control
+    SW
 	 
 	);
 	
@@ -82,10 +93,24 @@ module processor(
 	output [4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
 	output [31:0] data_writeReg;
 	input [31:0] data_readRegA, data_readRegB;
+	output [4:0] fd_op_test;
 	
 	output reg [15:0] LED;
+	
+	// registers for controlling target for barrel units
+	input [31:0] register1;
+	input [31:0] register2;
+	
+	// switches for animation vs keyboard
+    input [15:0] SW;
+
+    	
 	wire [15:0] LED_wire1;
 	wire [15:0] LED_wire2;
+	
+	assign fd_op_test = fd_op;
+	
+	
 	
 
 	/* YOUR CODE STARTS HERE */
@@ -400,14 +425,14 @@ wire [31:0] alu_b_bypass =
     end
 //(curr_reel == 3'b000)
     // todo: pass inouts from board to top level module and all the way down
-    stepper stepper1(stepper_clock, BTNR, JB[1], JA1[4:1], ps2_clk, ps2_data,(curr_reel == 1'b0),update[0], LED_wire1, curr_reg1);
-    stepper stepper2(stepper_clock, BTNR, JB[2], JA2[4:1], ps2_clk, ps2_data,(curr_reel == 1'b1),update[1], LED_wire2, curr_reg2);
+    stepper stepper1(stepper_clock, BTNR, JB[1], JA1[4:1], ps2_clk, ps2_data,(curr_reel == 1'b0),update[0], LED_wire1, register1, SW);
+    stepper stepper2(stepper_clock, BTNR, JB[2], JA2[4:1], ps2_clk, ps2_data,(curr_reel == 1'b1),update[1], LED_wire2, register2, SW);
     reg [30:0] ps2_check; 
     always @(posedge stepper_clock) begin
     if (!ps2_clk) begin
         ps2_check = ps2_check + 1; 
     end    
-        LED <= {curr_reel, just_updated, curr_reg1[12:0]};
+        LED <= {LED_wire1};
     end
 
 	/* END CODE */

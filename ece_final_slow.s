@@ -1,19 +1,19 @@
-addi $r1, $r0, 20 # Spells ECE350
+addi $r1, $r0, 75 # Spells ECE350
 nop
 nop
-addi $r2, $r0, 10
+addi $r2, $r0, 38
 nop
 nop
-addi $r3, $r0, 20
+addi $r3, $r0, 75
 nop
 nop
-addi $r4, $r0, 145
+addi $r4, $r0, 544
 nop
 nop
-addi $r5, $r0, 155
+addi $r5, $r0, 581
 nop
 nop
-addi $r6, $r0, 130
+addi $r6, $r0, 488
 nop
 nop
 addi $r7, $r0, 0 # Initializes a counter in register 7
@@ -32,22 +32,22 @@ blt $r7, $r8, wait # while r7 < 50,000,000, go back to wait
 nop
 nop
 
-addi $r1, $r0, 35 # HELLO
+addi $r1, $r0, 131 # HELLO
 nop
 nop
-addi $r2, $r0, 20
+addi $r2, $r0, 75
 nop
 nop
-addi $r3, $r0, 55
+addi $r3, $r0, 206
 nop
 nop
-addi $r4, $r0, 55
+addi $r4, $r0, 206
 nop
 nop
-addi $r5, $r0, 70
+addi $r5, $r0, 263
 nop
 nop
-addi $r6, $r0, 195 # We should save this flap for a blank flap, don't always want to be displaying 
+addi $r6, $r0, 750 # We should save this flap for a blank flap, don't always want to be displaying 
 nop
 nop
 addi $r7, $r0, 0 # Initializes a counter in register 7
@@ -66,22 +66,22 @@ blt $r7, $r8, wait2 # while r7 < 50,000,000, go back to wait
 nop
 nop
 
-addi $r1, $r0, 110 # WORLD
+addi $r1, $r0, 413 # WORLD
 nop
 nop
-addi $r2, $r0, 70
+addi $r2, $r0, 263
 nop
 nop
-addi $r3, $r0, 85
+addi $r3, $r0, 319
 nop
 nop
-addi $r4, $r0, 55
+addi $r4, $r0, 206
 nop
 nop
-addi $r5, $r0, 15
+addi $r5, $r0, 56
 nop
 nop
-addi $r6, $r0, 195 # BLANK
+addi $r6, $r0, 750 # BLANK
 nop
 nop
 addi $r7, $r0, 0 # Initializes a counter in register 7
@@ -152,10 +152,10 @@ addi $r9, $r0, 5000000 # Initializes the counter completion in register 9, 5,000
 nop
 nop
 
-addi $r3, $r0, 5
+addi $r3, $r0, 19
 nop
 nop
-addi $r4, $r0, 5
+addi $r4, $r0, 19
 nop
 nop
 smallwait1:
@@ -168,10 +168,10 @@ blt $r7, $r9, smallwait1 # while r7 < 5,000,000, go back to wait
 nop
 nop
 
-addi $r2, $r0, 5
+addi $r2, $r0, 19
 nop
 nop
-addi $r5, $r0, 5
+addi $r5, $r0, 19
 nop
 nop
 addi $r7, $r0, 0 # Initializes a counter in register 7
@@ -187,10 +187,10 @@ blt $r9, $r7, smallwait2 # while r7 < 5,000,000, go back to wait
 nop
 nop
 
-addi $r1, $r0, 5
+addi $r1, $r0, 19
 nop
 nop
-addi $r6, $r0, 5 
+addi $r6, $r0, 19
 nop
 nop
 addi $r7, $r0, 0 # Initializes a counter in register 7
@@ -221,30 +221,10 @@ nop
 blt $r7, $r8, wait4 # while r7 < 5,000,000, go back to wait
 nop
 nop
-
+addi $r10, $r10, 1
+nop
+nop
 blt $r10, $r11, repeat # repeat this little animation 20 times
 nop
 nop
 
-manual: # Can switch to manual mode by setting registers 1-6 to 1073741824.
-addi $r1, $r0, 1073741824 # r1 = 1073741824
-nop
-nop
-addi $r2, $r0, 1073741824 # r2 = 1073741824
-nop
-nop
-addi $r3, $r0, 1073741824 # r3 = 1073741824
-nop
-nop
-addi $r4, $r0, 1073741824 # r4 = 1073741824
-nop
-nop
-addi $r5, $r0, 1073741824 # r5 = 1073741824
-nop
-nop
-addi $r6, $r0, 1073741824 # r6 = 1073741824
-nop
-nop
-bne $r0, $r21 manual
-nop
-nop
