@@ -27,8 +27,9 @@
 module Wrapper (
     input clk_100mhz,
     input BTNU, BTNR,
-    input [1:0] JB,
-    output [4:1] JA,
+    input [2:0] JB,
+    output [4:1] JA1,
+    output [4:1] JA2,
     inout ps2_clk,
     inout ps2_data,
     
@@ -62,7 +63,7 @@ module Wrapper (
 //       end
     assign q_dmem = (io_read == 1'b1) ? SW_Q : memDataOut;
 	// ADD YOUR MEMORY FILE HERE
-	localparam INSTR_FILE = "final_test";
+	localparam INSTR_FILE = "addi_basic";
 	
 //	 BTNR,
 //    JB,
@@ -72,19 +73,23 @@ module Wrapper (
 	
 	
 	reg clk_div;
-	reg cpu_clock; 
-	
+	reg cpu_clock;
+	reg [30:0] ps2_check; 
 	always @(posedge clock) begin
-	   clk_div = clk_div + 1; 
+	   clk_div = clk_div + 1;
+	   if (!ps2_clk) begin
+	   ps2_check = ps2_check + 1; 
+	   end 
+	   
 	   if (clk_div) cpu_clock = ~cpu_clock;
-	   LED <= LED_wire;
+	   LED <= {LED_wire};
     end
     
     wire [15:0] LED_wire;
     
     
 	// Main Processing Unit
-	processor CPU(.clock(cpu_clock), .reset(reset), 
+	processor CPU(.stepper_clock(clk_100mhz), .clock(cpu_clock), .reset(reset), 
 								
 		// ROM
 		.address_imem(instAddr), .q_imem(instData),
@@ -100,7 +105,7 @@ module Wrapper (
 		
 		// stepper
 		.BTNR(BTNR), .JB(JB),
-		.JA(JA), .ps2_clk(ps2_clk),
+		.JA1(JA1), .JA2(JA2), .ps2_clk(ps2_clk),
 		.ps2_data(ps2_data),
 		
 		.LED(LED_wire)

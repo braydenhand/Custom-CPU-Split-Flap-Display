@@ -1,12 +1,13 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.sim/sim_1/impl/timing/xsim/Wrapper_tb_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.sim/sim_1/impl/timing/xsim/Wrapper_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IOBUF_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module IOBUF_HD1
+INFO: [VRFC 10-311] analyzing module Ps2Interface
+INFO: [VRFC 10-311] analyzing module Ps2Interface_1062
 INFO: [VRFC 10-311] analyzing module RAM
 INFO: [VRFC 10-311] analyzing module ROM
 INFO: [VRFC 10-311] analyzing module Wrapper
 INFO: [VRFC 10-311] analyzing module alu
-INFO: [VRFC 10-311] analyzing module alu_1320
-INFO: [VRFC 10-311] analyzing module alu_1321
-INFO: [VRFC 10-311] analyzing module alu_1322
-INFO: [VRFC 10-311] analyzing module alu_1323
+INFO: [VRFC 10-311] analyzing module alu_1152
 INFO: [VRFC 10-311] analyzing module counter
 INFO: [VRFC 10-311] analyzing module counter_32
 INFO: [VRFC 10-311] analyzing module dffe_ref
@@ -77,7 +78,6 @@ INFO: [VRFC 10-311] analyzing module dffe_ref_1059
 INFO: [VRFC 10-311] analyzing module dffe_ref_106
 INFO: [VRFC 10-311] analyzing module dffe_ref_1060
 INFO: [VRFC 10-311] analyzing module dffe_ref_1061
-INFO: [VRFC 10-311] analyzing module dffe_ref_1062
 INFO: [VRFC 10-311] analyzing module dffe_ref_1063
 INFO: [VRFC 10-311] analyzing module dffe_ref_1064
 INFO: [VRFC 10-311] analyzing module dffe_ref_1065
@@ -165,24 +165,12 @@ INFO: [VRFC 10-311] analyzing module dffe_ref_1139
 INFO: [VRFC 10-311] analyzing module dffe_ref_114
 INFO: [VRFC 10-311] analyzing module dffe_ref_1140
 INFO: [VRFC 10-311] analyzing module dffe_ref_1141
-INFO: [VRFC 10-311] analyzing module dffe_ref_1142
-INFO: [VRFC 10-311] analyzing module dffe_ref_1143
-INFO: [VRFC 10-311] analyzing module dffe_ref_1144
-INFO: [VRFC 10-311] analyzing module dffe_ref_1145
 INFO: [VRFC 10-311] analyzing module dffe_ref_1146
 INFO: [VRFC 10-311] analyzing module dffe_ref_1147
 INFO: [VRFC 10-311] analyzing module dffe_ref_1148
 INFO: [VRFC 10-311] analyzing module dffe_ref_1149
 INFO: [VRFC 10-311] analyzing module dffe_ref_115
 INFO: [VRFC 10-311] analyzing module dffe_ref_1150
-INFO: [VRFC 10-311] analyzing module dffe_ref_1151
-INFO: [VRFC 10-311] analyzing module dffe_ref_1152
-INFO: [VRFC 10-311] analyzing module dffe_ref_1153
-INFO: [VRFC 10-311] analyzing module dffe_ref_1154
-INFO: [VRFC 10-311] analyzing module dffe_ref_1155
-INFO: [VRFC 10-311] analyzing module dffe_ref_1156
-INFO: [VRFC 10-311] analyzing module dffe_ref_1157
-INFO: [VRFC 10-311] analyzing module dffe_ref_1158
 INFO: [VRFC 10-311] analyzing module dffe_ref_1159
 INFO: [VRFC 10-311] analyzing module dffe_ref_116
 INFO: [VRFC 10-311] analyzing module dffe_ref_1160
@@ -278,8 +266,13 @@ INFO: [VRFC 10-311] analyzing module dffe_ref_1241
 INFO: [VRFC 10-311] analyzing module dffe_ref_1242
 INFO: [VRFC 10-311] analyzing module dffe_ref_1243
 INFO: [VRFC 10-311] analyzing module dffe_ref_1244
+INFO: [VRFC 10-311] analyzing module dffe_ref_1245
 INFO: [VRFC 10-311] analyzing module dffe_ref_1246
+INFO: [VRFC 10-311] analyzing module dffe_ref_1247
+INFO: [VRFC 10-311] analyzing module dffe_ref_1248
+INFO: [VRFC 10-311] analyzing module dffe_ref_1249
 INFO: [VRFC 10-311] analyzing module dffe_ref_125
+INFO: [VRFC 10-311] analyzing module dffe_ref_1250
 INFO: [VRFC 10-311] analyzing module dffe_ref_1251
 INFO: [VRFC 10-311] analyzing module dffe_ref_1252
 INFO: [VRFC 10-311] analyzing module dffe_ref_1253
@@ -351,306 +344,34 @@ INFO: [VRFC 10-311] analyzing module dffe_ref_1312
 INFO: [VRFC 10-311] analyzing module dffe_ref_1313
 INFO: [VRFC 10-311] analyzing module dffe_ref_1314
 INFO: [VRFC 10-311] analyzing module dffe_ref_1315
-INFO: [VRFC 10-311] analyzing module dffe_ref_1316
-INFO: [VRFC 10-311] analyzing module dffe_ref_1317
-INFO: [VRFC 10-311] analyzing module dffe_ref_1318
 INFO: [VRFC 10-311] analyzing module dffe_ref_132
 INFO: [VRFC 10-311] analyzing module dffe_ref_133
-INFO: [VRFC 10-311] analyzing module dffe_ref_1330
-INFO: [VRFC 10-311] analyzing module dffe_ref_1331
-INFO: [VRFC 10-311] analyzing module dffe_ref_1332
-INFO: [VRFC 10-311] analyzing module dffe_ref_1333
-INFO: [VRFC 10-311] analyzing module dffe_ref_1334
-INFO: [VRFC 10-311] analyzing module dffe_ref_1335
-INFO: [VRFC 10-311] analyzing module dffe_ref_1336
-INFO: [VRFC 10-311] analyzing module dffe_ref_1337
-INFO: [VRFC 10-311] analyzing module dffe_ref_1338
-INFO: [VRFC 10-311] analyzing module dffe_ref_1339
 INFO: [VRFC 10-311] analyzing module dffe_ref_134
-INFO: [VRFC 10-311] analyzing module dffe_ref_1340
-INFO: [VRFC 10-311] analyzing module dffe_ref_1341
-INFO: [VRFC 10-311] analyzing module dffe_ref_1342
-INFO: [VRFC 10-311] analyzing module dffe_ref_1343
-INFO: [VRFC 10-311] analyzing module dffe_ref_1344
-INFO: [VRFC 10-311] analyzing module dffe_ref_1345
-INFO: [VRFC 10-311] analyzing module dffe_ref_1346
-INFO: [VRFC 10-311] analyzing module dffe_ref_1347
-INFO: [VRFC 10-311] analyzing module dffe_ref_1348
-INFO: [VRFC 10-311] analyzing module dffe_ref_1349
 INFO: [VRFC 10-311] analyzing module dffe_ref_135
-INFO: [VRFC 10-311] analyzing module dffe_ref_1350
-INFO: [VRFC 10-311] analyzing module dffe_ref_1351
-INFO: [VRFC 10-311] analyzing module dffe_ref_1352
-INFO: [VRFC 10-311] analyzing module dffe_ref_1353
-INFO: [VRFC 10-311] analyzing module dffe_ref_1354
-INFO: [VRFC 10-311] analyzing module dffe_ref_1355
-INFO: [VRFC 10-311] analyzing module dffe_ref_1356
-INFO: [VRFC 10-311] analyzing module dffe_ref_1357
-INFO: [VRFC 10-311] analyzing module dffe_ref_1358
-INFO: [VRFC 10-311] analyzing module dffe_ref_1359
 INFO: [VRFC 10-311] analyzing module dffe_ref_136
-INFO: [VRFC 10-311] analyzing module dffe_ref_1360
-INFO: [VRFC 10-311] analyzing module dffe_ref_1361
-INFO: [VRFC 10-311] analyzing module dffe_ref_1362
-INFO: [VRFC 10-311] analyzing module dffe_ref_1363
-INFO: [VRFC 10-311] analyzing module dffe_ref_1364
-INFO: [VRFC 10-311] analyzing module dffe_ref_1365
-INFO: [VRFC 10-311] analyzing module dffe_ref_1366
-INFO: [VRFC 10-311] analyzing module dffe_ref_1367
-INFO: [VRFC 10-311] analyzing module dffe_ref_1368
-INFO: [VRFC 10-311] analyzing module dffe_ref_1369
 INFO: [VRFC 10-311] analyzing module dffe_ref_137
-INFO: [VRFC 10-311] analyzing module dffe_ref_1370
-INFO: [VRFC 10-311] analyzing module dffe_ref_1371
-INFO: [VRFC 10-311] analyzing module dffe_ref_1372
-INFO: [VRFC 10-311] analyzing module dffe_ref_1373
-INFO: [VRFC 10-311] analyzing module dffe_ref_1374
-INFO: [VRFC 10-311] analyzing module dffe_ref_1375
-INFO: [VRFC 10-311] analyzing module dffe_ref_1376
-INFO: [VRFC 10-311] analyzing module dffe_ref_1377
-INFO: [VRFC 10-311] analyzing module dffe_ref_1378
-INFO: [VRFC 10-311] analyzing module dffe_ref_1379
 INFO: [VRFC 10-311] analyzing module dffe_ref_138
-INFO: [VRFC 10-311] analyzing module dffe_ref_1380
-INFO: [VRFC 10-311] analyzing module dffe_ref_1381
-INFO: [VRFC 10-311] analyzing module dffe_ref_1382
-INFO: [VRFC 10-311] analyzing module dffe_ref_1383
-INFO: [VRFC 10-311] analyzing module dffe_ref_1384
-INFO: [VRFC 10-311] analyzing module dffe_ref_1385
-INFO: [VRFC 10-311] analyzing module dffe_ref_1386
-INFO: [VRFC 10-311] analyzing module dffe_ref_1387
-INFO: [VRFC 10-311] analyzing module dffe_ref_1388
-INFO: [VRFC 10-311] analyzing module dffe_ref_1389
 INFO: [VRFC 10-311] analyzing module dffe_ref_139
-INFO: [VRFC 10-311] analyzing module dffe_ref_1390
-INFO: [VRFC 10-311] analyzing module dffe_ref_1391
-INFO: [VRFC 10-311] analyzing module dffe_ref_1392
-INFO: [VRFC 10-311] analyzing module dffe_ref_1393
-INFO: [VRFC 10-311] analyzing module dffe_ref_1394
-INFO: [VRFC 10-311] analyzing module dffe_ref_1395
-INFO: [VRFC 10-311] analyzing module dffe_ref_1396
-INFO: [VRFC 10-311] analyzing module dffe_ref_1397
-INFO: [VRFC 10-311] analyzing module dffe_ref_1398
-INFO: [VRFC 10-311] analyzing module dffe_ref_1399
 INFO: [VRFC 10-311] analyzing module dffe_ref_140
-INFO: [VRFC 10-311] analyzing module dffe_ref_1400
-INFO: [VRFC 10-311] analyzing module dffe_ref_1401
-INFO: [VRFC 10-311] analyzing module dffe_ref_1402
-INFO: [VRFC 10-311] analyzing module dffe_ref_1403
-INFO: [VRFC 10-311] analyzing module dffe_ref_1404
-INFO: [VRFC 10-311] analyzing module dffe_ref_1405
-INFO: [VRFC 10-311] analyzing module dffe_ref_1406
-INFO: [VRFC 10-311] analyzing module dffe_ref_1407
-INFO: [VRFC 10-311] analyzing module dffe_ref_1408
-INFO: [VRFC 10-311] analyzing module dffe_ref_1409
 INFO: [VRFC 10-311] analyzing module dffe_ref_141
-INFO: [VRFC 10-311] analyzing module dffe_ref_1410
-INFO: [VRFC 10-311] analyzing module dffe_ref_1411
-INFO: [VRFC 10-311] analyzing module dffe_ref_1412
-INFO: [VRFC 10-311] analyzing module dffe_ref_1413
-INFO: [VRFC 10-311] analyzing module dffe_ref_1414
-INFO: [VRFC 10-311] analyzing module dffe_ref_1415
-INFO: [VRFC 10-311] analyzing module dffe_ref_1416
-INFO: [VRFC 10-311] analyzing module dffe_ref_1417
-INFO: [VRFC 10-311] analyzing module dffe_ref_1418
-INFO: [VRFC 10-311] analyzing module dffe_ref_1419
 INFO: [VRFC 10-311] analyzing module dffe_ref_142
-INFO: [VRFC 10-311] analyzing module dffe_ref_1420
-INFO: [VRFC 10-311] analyzing module dffe_ref_1421
-INFO: [VRFC 10-311] analyzing module dffe_ref_1422
-INFO: [VRFC 10-311] analyzing module dffe_ref_1423
-INFO: [VRFC 10-311] analyzing module dffe_ref_1424
-INFO: [VRFC 10-311] analyzing module dffe_ref_1425
-INFO: [VRFC 10-311] analyzing module dffe_ref_1426
-INFO: [VRFC 10-311] analyzing module dffe_ref_1427
-INFO: [VRFC 10-311] analyzing module dffe_ref_1428
-INFO: [VRFC 10-311] analyzing module dffe_ref_1429
 INFO: [VRFC 10-311] analyzing module dffe_ref_143
-INFO: [VRFC 10-311] analyzing module dffe_ref_1430
-INFO: [VRFC 10-311] analyzing module dffe_ref_1431
-INFO: [VRFC 10-311] analyzing module dffe_ref_1432
-INFO: [VRFC 10-311] analyzing module dffe_ref_1433
-INFO: [VRFC 10-311] analyzing module dffe_ref_1434
-INFO: [VRFC 10-311] analyzing module dffe_ref_1435
-INFO: [VRFC 10-311] analyzing module dffe_ref_1436
-INFO: [VRFC 10-311] analyzing module dffe_ref_1437
-INFO: [VRFC 10-311] analyzing module dffe_ref_1438
-INFO: [VRFC 10-311] analyzing module dffe_ref_1439
 INFO: [VRFC 10-311] analyzing module dffe_ref_144
-INFO: [VRFC 10-311] analyzing module dffe_ref_1440
-INFO: [VRFC 10-311] analyzing module dffe_ref_1441
-INFO: [VRFC 10-311] analyzing module dffe_ref_1442
-INFO: [VRFC 10-311] analyzing module dffe_ref_1443
-INFO: [VRFC 10-311] analyzing module dffe_ref_1444
-INFO: [VRFC 10-311] analyzing module dffe_ref_1445
-INFO: [VRFC 10-311] analyzing module dffe_ref_1446
-INFO: [VRFC 10-311] analyzing module dffe_ref_1447
-INFO: [VRFC 10-311] analyzing module dffe_ref_1448
-INFO: [VRFC 10-311] analyzing module dffe_ref_1449
 INFO: [VRFC 10-311] analyzing module dffe_ref_145
-INFO: [VRFC 10-311] analyzing module dffe_ref_1450
-INFO: [VRFC 10-311] analyzing module dffe_ref_1451
-INFO: [VRFC 10-311] analyzing module dffe_ref_1452
-INFO: [VRFC 10-311] analyzing module dffe_ref_1453
-INFO: [VRFC 10-311] analyzing module dffe_ref_1454
-INFO: [VRFC 10-311] analyzing module dffe_ref_1455
-INFO: [VRFC 10-311] analyzing module dffe_ref_1456
-INFO: [VRFC 10-311] analyzing module dffe_ref_1457
-INFO: [VRFC 10-311] analyzing module dffe_ref_1458
-INFO: [VRFC 10-311] analyzing module dffe_ref_1459
 INFO: [VRFC 10-311] analyzing module dffe_ref_146
-INFO: [VRFC 10-311] analyzing module dffe_ref_1460
-INFO: [VRFC 10-311] analyzing module dffe_ref_1461
-INFO: [VRFC 10-311] analyzing module dffe_ref_1462
-INFO: [VRFC 10-311] analyzing module dffe_ref_1463
-INFO: [VRFC 10-311] analyzing module dffe_ref_1464
-INFO: [VRFC 10-311] analyzing module dffe_ref_1465
-INFO: [VRFC 10-311] analyzing module dffe_ref_1466
-INFO: [VRFC 10-311] analyzing module dffe_ref_1467
-INFO: [VRFC 10-311] analyzing module dffe_ref_1468
-INFO: [VRFC 10-311] analyzing module dffe_ref_1469
 INFO: [VRFC 10-311] analyzing module dffe_ref_147
-INFO: [VRFC 10-311] analyzing module dffe_ref_1470
-INFO: [VRFC 10-311] analyzing module dffe_ref_1471
-INFO: [VRFC 10-311] analyzing module dffe_ref_1472
-INFO: [VRFC 10-311] analyzing module dffe_ref_1473
-INFO: [VRFC 10-311] analyzing module dffe_ref_1474
-INFO: [VRFC 10-311] analyzing module dffe_ref_1475
-INFO: [VRFC 10-311] analyzing module dffe_ref_1476
-INFO: [VRFC 10-311] analyzing module dffe_ref_1477
-INFO: [VRFC 10-311] analyzing module dffe_ref_1478
-INFO: [VRFC 10-311] analyzing module dffe_ref_1479
 INFO: [VRFC 10-311] analyzing module dffe_ref_148
-INFO: [VRFC 10-311] analyzing module dffe_ref_1480
-INFO: [VRFC 10-311] analyzing module dffe_ref_1481
-INFO: [VRFC 10-311] analyzing module dffe_ref_1482
-INFO: [VRFC 10-311] analyzing module dffe_ref_1483
-INFO: [VRFC 10-311] analyzing module dffe_ref_1484
-INFO: [VRFC 10-311] analyzing module dffe_ref_1485
-INFO: [VRFC 10-311] analyzing module dffe_ref_1486
-INFO: [VRFC 10-311] analyzing module dffe_ref_1487
-INFO: [VRFC 10-311] analyzing module dffe_ref_1488
-INFO: [VRFC 10-311] analyzing module dffe_ref_1489
 INFO: [VRFC 10-311] analyzing module dffe_ref_149
-INFO: [VRFC 10-311] analyzing module dffe_ref_1490
-INFO: [VRFC 10-311] analyzing module dffe_ref_1491
-INFO: [VRFC 10-311] analyzing module dffe_ref_1492
-INFO: [VRFC 10-311] analyzing module dffe_ref_1493
-INFO: [VRFC 10-311] analyzing module dffe_ref_1494
-INFO: [VRFC 10-311] analyzing module dffe_ref_1495
-INFO: [VRFC 10-311] analyzing module dffe_ref_1496
-INFO: [VRFC 10-311] analyzing module dffe_ref_1497
-INFO: [VRFC 10-311] analyzing module dffe_ref_1498
-INFO: [VRFC 10-311] analyzing module dffe_ref_1499
 INFO: [VRFC 10-311] analyzing module dffe_ref_150
-INFO: [VRFC 10-311] analyzing module dffe_ref_1500
-INFO: [VRFC 10-311] analyzing module dffe_ref_1501
-INFO: [VRFC 10-311] analyzing module dffe_ref_1502
-INFO: [VRFC 10-311] analyzing module dffe_ref_1503
-INFO: [VRFC 10-311] analyzing module dffe_ref_1504
-INFO: [VRFC 10-311] analyzing module dffe_ref_1505
-INFO: [VRFC 10-311] analyzing module dffe_ref_1506
-INFO: [VRFC 10-311] analyzing module dffe_ref_1507
-INFO: [VRFC 10-311] analyzing module dffe_ref_1508
-INFO: [VRFC 10-311] analyzing module dffe_ref_1509
 INFO: [VRFC 10-311] analyzing module dffe_ref_151
-INFO: [VRFC 10-311] analyzing module dffe_ref_1510
-INFO: [VRFC 10-311] analyzing module dffe_ref_1511
-INFO: [VRFC 10-311] analyzing module dffe_ref_1512
-INFO: [VRFC 10-311] analyzing module dffe_ref_1513
-INFO: [VRFC 10-311] analyzing module dffe_ref_1514
-INFO: [VRFC 10-311] analyzing module dffe_ref_1515
-INFO: [VRFC 10-311] analyzing module dffe_ref_1516
-INFO: [VRFC 10-311] analyzing module dffe_ref_1517
-INFO: [VRFC 10-311] analyzing module dffe_ref_1518
-INFO: [VRFC 10-311] analyzing module dffe_ref_1519
 INFO: [VRFC 10-311] analyzing module dffe_ref_152
-INFO: [VRFC 10-311] analyzing module dffe_ref_1520
-INFO: [VRFC 10-311] analyzing module dffe_ref_1521
-INFO: [VRFC 10-311] analyzing module dffe_ref_1522
-INFO: [VRFC 10-311] analyzing module dffe_ref_1523
-INFO: [VRFC 10-311] analyzing module dffe_ref_1524
-INFO: [VRFC 10-311] analyzing module dffe_ref_1525
-INFO: [VRFC 10-311] analyzing module dffe_ref_1526
-INFO: [VRFC 10-311] analyzing module dffe_ref_1527
-INFO: [VRFC 10-311] analyzing module dffe_ref_1528
-INFO: [VRFC 10-311] analyzing module dffe_ref_1529
 INFO: [VRFC 10-311] analyzing module dffe_ref_153
-INFO: [VRFC 10-311] analyzing module dffe_ref_1530
-INFO: [VRFC 10-311] analyzing module dffe_ref_1531
-INFO: [VRFC 10-311] analyzing module dffe_ref_1532
-INFO: [VRFC 10-311] analyzing module dffe_ref_1533
-INFO: [VRFC 10-311] analyzing module dffe_ref_1534
-INFO: [VRFC 10-311] analyzing module dffe_ref_1535
-INFO: [VRFC 10-311] analyzing module dffe_ref_1536
-INFO: [VRFC 10-311] analyzing module dffe_ref_1537
-INFO: [VRFC 10-311] analyzing module dffe_ref_1538
-INFO: [VRFC 10-311] analyzing module dffe_ref_1539
 INFO: [VRFC 10-311] analyzing module dffe_ref_154
-INFO: [VRFC 10-311] analyzing module dffe_ref_1540
-INFO: [VRFC 10-311] analyzing module dffe_ref_1541
-INFO: [VRFC 10-311] analyzing module dffe_ref_1542
-INFO: [VRFC 10-311] analyzing module dffe_ref_1543
-INFO: [VRFC 10-311] analyzing module dffe_ref_1544
-INFO: [VRFC 10-311] analyzing module dffe_ref_1545
-INFO: [VRFC 10-311] analyzing module dffe_ref_1546
-INFO: [VRFC 10-311] analyzing module dffe_ref_1547
-INFO: [VRFC 10-311] analyzing module dffe_ref_1548
-INFO: [VRFC 10-311] analyzing module dffe_ref_1549
 INFO: [VRFC 10-311] analyzing module dffe_ref_155
-INFO: [VRFC 10-311] analyzing module dffe_ref_1550
-INFO: [VRFC 10-311] analyzing module dffe_ref_1551
-INFO: [VRFC 10-311] analyzing module dffe_ref_1552
-INFO: [VRFC 10-311] analyzing module dffe_ref_1553
-INFO: [VRFC 10-311] analyzing module dffe_ref_1554
-INFO: [VRFC 10-311] analyzing module dffe_ref_1555
-INFO: [VRFC 10-311] analyzing module dffe_ref_1556
-INFO: [VRFC 10-311] analyzing module dffe_ref_1557
-INFO: [VRFC 10-311] analyzing module dffe_ref_1558
-INFO: [VRFC 10-311] analyzing module dffe_ref_1559
 INFO: [VRFC 10-311] analyzing module dffe_ref_156
-INFO: [VRFC 10-311] analyzing module dffe_ref_1560
-INFO: [VRFC 10-311] analyzing module dffe_ref_1561
-INFO: [VRFC 10-311] analyzing module dffe_ref_1562
-INFO: [VRFC 10-311] analyzing module dffe_ref_1563
-INFO: [VRFC 10-311] analyzing module dffe_ref_1564
-INFO: [VRFC 10-311] analyzing module dffe_ref_1565
-INFO: [VRFC 10-311] analyzing module dffe_ref_1566
-INFO: [VRFC 10-311] analyzing module dffe_ref_1567
-INFO: [VRFC 10-311] analyzing module dffe_ref_1568
-INFO: [VRFC 10-311] analyzing module dffe_ref_1569
 INFO: [VRFC 10-311] analyzing module dffe_ref_157
-INFO: [VRFC 10-311] analyzing module dffe_ref_1570
-INFO: [VRFC 10-311] analyzing module dffe_ref_1571
-INFO: [VRFC 10-311] analyzing module dffe_ref_1572
-INFO: [VRFC 10-311] analyzing module dffe_ref_1573
-INFO: [VRFC 10-311] analyzing module dffe_ref_1574
-INFO: [VRFC 10-311] analyzing module dffe_ref_1575
-INFO: [VRFC 10-311] analyzing module dffe_ref_1576
-INFO: [VRFC 10-311] analyzing module dffe_ref_1577
-INFO: [VRFC 10-311] analyzing module dffe_ref_1578
-INFO: [VRFC 10-311] analyzing module dffe_ref_1579
 INFO: [VRFC 10-311] analyzing module dffe_ref_158
-INFO: [VRFC 10-311] analyzing module dffe_ref_1580
-INFO: [VRFC 10-311] analyzing module dffe_ref_1581
-INFO: [VRFC 10-311] analyzing module dffe_ref_1582
-INFO: [VRFC 10-311] analyzing module dffe_ref_1583
-INFO: [VRFC 10-311] analyzing module dffe_ref_1584
-INFO: [VRFC 10-311] analyzing module dffe_ref_1585
-INFO: [VRFC 10-311] analyzing module dffe_ref_1586
-INFO: [VRFC 10-311] analyzing module dffe_ref_1587
-INFO: [VRFC 10-311] analyzing module dffe_ref_1588
-INFO: [VRFC 10-311] analyzing module dffe_ref_1589
 INFO: [VRFC 10-311] analyzing module dffe_ref_159
-INFO: [VRFC 10-311] analyzing module dffe_ref_1590
-INFO: [VRFC 10-311] analyzing module dffe_ref_1591
-INFO: [VRFC 10-311] analyzing module dffe_ref_1592
-INFO: [VRFC 10-311] analyzing module dffe_ref_1593
-INFO: [VRFC 10-311] analyzing module dffe_ref_1594
-INFO: [VRFC 10-311] analyzing module dffe_ref_1595
-INFO: [VRFC 10-311] analyzing module dffe_ref_1596
-INFO: [VRFC 10-311] analyzing module dffe_ref_1597
-INFO: [VRFC 10-311] analyzing module dffe_ref_1598
 INFO: [VRFC 10-311] analyzing module dffe_ref_160
 INFO: [VRFC 10-311] analyzing module dffe_ref_161
 INFO: [VRFC 10-311] analyzing module dffe_ref_162
@@ -1570,7 +1291,6 @@ INFO: [VRFC 10-311] analyzing module register
 INFO: [VRFC 10-311] analyzing module register_0
 INFO: [VRFC 10-311] analyzing module register_1
 INFO: [VRFC 10-311] analyzing module register_10
-INFO: [VRFC 10-311] analyzing module register_1021
 INFO: [VRFC 10-311] analyzing module register_11
 INFO: [VRFC 10-311] analyzing module register_12
 INFO: [VRFC 10-311] analyzing module register_13
@@ -1599,497 +1319,24 @@ INFO: [VRFC 10-311] analyzing module register_7
 INFO: [VRFC 10-311] analyzing module register_8
 INFO: [VRFC 10-311] analyzing module register_9
 INFO: [VRFC 10-311] analyzing module register__parameterized0
-INFO: [VRFC 10-311] analyzing module register__parameterized0_1319
+INFO: [VRFC 10-311] analyzing module register__parameterized0_1151
 INFO: [VRFC 10-311] analyzing module register__parameterized1
 INFO: [VRFC 10-311] analyzing module register__parameterized2
-INFO: [VRFC 10-311] analyzing module register__parameterized2_1245
 INFO: [VRFC 10-311] analyzing module register__parameterized3
 INFO: [VRFC 10-311] analyzing module register__parameterized4
-INFO: [VRFC 10-311] analyzing module register__parameterized5
 INFO: [VRFC 10-311] analyzing module register__parameterized6
 INFO: [VRFC 10-311] analyzing module register__parameterized6_1022
-INFO: [VRFC 10-311] analyzing module tff
-INFO: [VRFC 10-311] analyzing module tff_1247
-INFO: [VRFC 10-311] analyzing module tff_1248
-INFO: [VRFC 10-311] analyzing module tff_1249
-INFO: [VRFC 10-311] analyzing module tff_1250
-INFO: [VRFC 10-311] analyzing module tff_1324
-INFO: [VRFC 10-311] analyzing module tff_1325
-INFO: [VRFC 10-311] analyzing module tff_1326
-INFO: [VRFC 10-311] analyzing module tff_1327
-INFO: [VRFC 10-311] analyzing module tff_1328
-INFO: [VRFC 10-311] analyzing module tff_1329
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/mux_8_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_8_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module processor
-INFO: [VRFC 10-2458] undeclared symbol to_stall, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:70]
-WARNING: [VRFC 10-2938] 'to_stall' is already implicitly declared on line 70 [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:100]
-INFO: [VRFC 10-2458] undeclared symbol data_resultRDY, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:165]
-INFO: [VRFC 10-2458] undeclared symbol exception, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:250]
-WARNING: [VRFC 10-2938] 'exception' is already implicitly declared on line 250 [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:256]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:76]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:77]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:79]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:80]
-WARNING: [VRFC 10-3380] identifier 'jump_calc' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:81]
-WARNING: [VRFC 10-3380] identifier 'ctrl_dx_out' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:82]
-WARNING: [VRFC 10-3380] identifier 'dx_out_A' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:83]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:90]
-WARNING: [VRFC 10-3380] identifier 'fd_rs' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:91]
-WARNING: [VRFC 10-3380] identifier 'fd_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:92]
-WARNING: [VRFC 10-3380] identifier 'fd_rs' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:93]
-WARNING: [VRFC 10-3380] identifier 'fd_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:94]
-WARNING: [VRFC 10-3380] identifier 'fd_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:95]
-WARNING: [VRFC 10-3380] identifier 'fd_rs' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:96]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:97]
-WARNING: [VRFC 10-3380] identifier 'fd_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:98]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:104]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:105]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:106]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:107]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:108]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:109]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:135]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:136]
-WARNING: [VRFC 10-3380] identifier 'ctrl_mw_out' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:137]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:138]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:139]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:140]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:141]
-WARNING: [VRFC 10-3380] identifier 'pw_ready' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:142]
-WARNING: [VRFC 10-3380] identifier 'sw_reg' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:144]
-WARNING: [VRFC 10-3380] identifier 'sw_data' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:149]
-WARNING: [VRFC 10-3380] identifier 'pw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:191]
-WARNING: [VRFC 10-3380] identifier 'pw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:192]
-WARNING: [VRFC 10-3380] identifier 'xm_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:194]
-WARNING: [VRFC 10-3380] identifier 'xm_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:195]
-WARNING: [VRFC 10-3380] identifier 'xm_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:196]
-WARNING: [VRFC 10-3380] identifier 'mw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:198]
-WARNING: [VRFC 10-3380] identifier 'mw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:199]
-WARNING: [VRFC 10-3380] identifier 'mw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:200]
-WARNING: [VRFC 10-3380] identifier 'ctrl_lw_d' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:201]
-WARNING: [VRFC 10-3380] identifier 'pw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:206]
-WARNING: [VRFC 10-3380] identifier 'pw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:207]
-WARNING: [VRFC 10-3380] identifier 'xm_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:209]
-WARNING: [VRFC 10-3380] identifier 'xm_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:210]
-WARNING: [VRFC 10-3380] identifier 'mw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:212]
-WARNING: [VRFC 10-3380] identifier 'mw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:213]
-WARNING: [VRFC 10-3380] identifier 'ctrl_lw_d' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:214]
-WARNING: [VRFC 10-3380] identifier 'xm_alu_of' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:216]
-WARNING: [VRFC 10-3380] identifier 'mw_alu_of' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:217]
-WARNING: [VRFC 10-3380] identifier 'mw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:286]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:287]
-WARNING: [VRFC 10-3380] identifier 'mw_out_D' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:288]
-WARNING: [VRFC 10-3380] identifier 'mw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:290]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:291]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:292]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:293]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:294]
-WARNING: [VRFC 10-3380] identifier 'ctrl_lw_d' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:295]
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'processor' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/processor.v:20]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/counter_32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module counter_32
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'counter_32' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/counter_32.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/register.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module register
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'register' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/register.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/alu.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module alu
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'alu' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/alu.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/multdiv.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multdiv
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'multdiv' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/multdiv.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/RAM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RAM
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'RAM' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/RAM.v:2]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/tff.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tff
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'tff' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/tff.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/barrel_shifter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module barrel_shifter
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/cla_adder_32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cla_adder_32
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/regfile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module regfile
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'regfile' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/regfile.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/multdiv_tb_brady.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multdiv_tb_brady
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/shift16.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shift16
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/shift8.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shift8
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/comp_32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module comp_32
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/not_32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module not_32
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/mux_16.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_16
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/shift4.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shift4
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/mux_32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_32
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/shift2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shift2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/multdiv_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multdiv_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/shift1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shift1
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/mult_ctrl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mult_ctrl
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'ROM' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/ROM.v:2]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/counter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module counter
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'counter' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/counter.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/dffe_ref.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dffe_ref
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'dffe_ref' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/dffe_ref.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/or_32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module or_32
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/full_adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module full_adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/Wrapper_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Wrapper_tb
-WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/Wrapper_tb.v:163]
-WARNING: [VRFC 10-3380] identifier 'reg_to_test' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/Wrapper_tb.v:63]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/alu_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module alu_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/mult.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mult
-INFO: [VRFC 10-2458] undeclared symbol of_out, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/mult.v:11]
-INFO: [VRFC 10-2458] undeclared symbol alu_in_A, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/mult.v:42]
-INFO: [VRFC 10-2458] undeclared symbol alu_in_B, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/mult.v:43]
-WARNING: [VRFC 10-3380] identifier 'of' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/mult.v:11]
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'mult' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/mult.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/div.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module div
-INFO: [VRFC 10-2458] undeclared symbol hilo_out, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/div.v:18]
-INFO: [VRFC 10-2458] undeclared symbol isNotEqual, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/div.v:28]
-INFO: [VRFC 10-2458] undeclared symbol isLessThan, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/div.v:28]
-INFO: [VRFC 10-2458] undeclared symbol of, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/div.v:28]
-WARNING: [VRFC 10-2938] 'isNotEqual' is already implicitly declared on line 28 [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/div.v:42]
-WARNING: [VRFC 10-3380] identifier 'hilo' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/div.v:18]
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'div' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/div.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/comp_8.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module comp_8
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/counter_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module counter_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decoder
-INFO: [VRFC 10-2458] undeclared symbol nA0, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:7]
-INFO: [VRFC 10-2458] undeclared symbol nA1, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:8]
-INFO: [VRFC 10-2458] undeclared symbol nA2, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:9]
-INFO: [VRFC 10-2458] undeclared symbol nA3, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:10]
-INFO: [VRFC 10-2458] undeclared symbol nA4, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:11]
-INFO: [VRFC 10-2458] undeclared symbol a0, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:20]
-INFO: [VRFC 10-2458] undeclared symbol a1, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:21]
-INFO: [VRFC 10-2458] undeclared symbol a2, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:22]
-INFO: [VRFC 10-2458] undeclared symbol a3, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:23]
-INFO: [VRFC 10-2458] undeclared symbol a4, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:24]
-INFO: [VRFC 10-2458] undeclared symbol a5, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:25]
-INFO: [VRFC 10-2458] undeclared symbol a6, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:26]
-INFO: [VRFC 10-2458] undeclared symbol a7, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:27]
-INFO: [VRFC 10-2458] undeclared symbol a8, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:29]
-INFO: [VRFC 10-2458] undeclared symbol a9, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:30]
-INFO: [VRFC 10-2458] undeclared symbol a10, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:31]
-INFO: [VRFC 10-2458] undeclared symbol a11, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:32]
-INFO: [VRFC 10-2458] undeclared symbol a12, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:33]
-INFO: [VRFC 10-2458] undeclared symbol a13, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:34]
-INFO: [VRFC 10-2458] undeclared symbol a14, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:35]
-INFO: [VRFC 10-2458] undeclared symbol a15, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:36]
-INFO: [VRFC 10-2458] undeclared symbol a16, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:38]
-INFO: [VRFC 10-2458] undeclared symbol a17, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:39]
-INFO: [VRFC 10-2458] undeclared symbol a18, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:40]
-INFO: [VRFC 10-2458] undeclared symbol a19, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:41]
-INFO: [VRFC 10-2458] undeclared symbol a20, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:42]
-INFO: [VRFC 10-2458] undeclared symbol a21, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:43]
-INFO: [VRFC 10-2458] undeclared symbol a22, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:44]
-INFO: [VRFC 10-2458] undeclared symbol a23, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:45]
-INFO: [VRFC 10-2458] undeclared symbol a24, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:47]
-INFO: [VRFC 10-2458] undeclared symbol a25, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:48]
-INFO: [VRFC 10-2458] undeclared symbol a26, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:49]
-INFO: [VRFC 10-2458] undeclared symbol a27, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:50]
-INFO: [VRFC 10-2458] undeclared symbol a28, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:51]
-INFO: [VRFC 10-2458] undeclared symbol a29, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:52]
-INFO: [VRFC 10-2458] undeclared symbol a30, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:53]
-INFO: [VRFC 10-2458] undeclared symbol a31, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/decoder.v:54]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/mux_4.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_4
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/regfile_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module regfile_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/cla_adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cla_adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/Wrapper.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Wrapper
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'Wrapper' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/Wrapper.v:27]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/mux_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/comp_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module comp_2
-INFO: [VRFC 10-2458] undeclared symbol notGT1, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/comp_2.v:15]
-INFO: [VRFC 10-2458] undeclared symbol w4, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/comp_2.v:18]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/mux_8.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_8
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/and_32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module and_32
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sim_1/imports/processor/multdiv/regfile/alu/mux_32_bus.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_32_bus
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/counter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module counter
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'counter' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/counter.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/new/fsm.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fsm
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/Wrapper_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Wrapper_tb
-WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/Wrapper_tb.v:163]
-WARNING: [VRFC 10-3380] identifier 'reg_to_test' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/Wrapper_tb.v:63]
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'Wrapper_tb' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/Wrapper_tb.v:36]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/mult.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mult
-INFO: [VRFC 10-2458] undeclared symbol of_out, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/mult.v:11]
-INFO: [VRFC 10-2458] undeclared symbol alu_in_A, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/mult.v:42]
-INFO: [VRFC 10-2458] undeclared symbol alu_in_B, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/mult.v:43]
-WARNING: [VRFC 10-3380] identifier 'of' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/mult.v:11]
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'mult' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/mult.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/RAM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RAM
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'RAM' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/RAM.v:2]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/Wrapper.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Wrapper
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'Wrapper' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/Wrapper.v:27]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/register.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module register
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'register' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/register.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/new/dff.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dff
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/regfile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module regfile
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'regfile' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/regfile.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/new/stepper.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module stepper
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/shift2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shift2
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'shift2' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/shift2.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/multdiv.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multdiv
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'multdiv' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/multdiv.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/comp_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module comp_2
-INFO: [VRFC 10-2458] undeclared symbol notGT1, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/comp_2.v:15]
-INFO: [VRFC 10-2458] undeclared symbol w4, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/comp_2.v:18]
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'comp_2' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/comp_2.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/full_adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module full_adder
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'full_adder' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/full_adder.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/regfile_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module regfile_tb
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'regfile_tb' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/regfile_tb.v:2]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/div.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module div
-INFO: [VRFC 10-2458] undeclared symbol hilo_out, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/div.v:18]
-INFO: [VRFC 10-2458] undeclared symbol isNotEqual, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/div.v:28]
-INFO: [VRFC 10-2458] undeclared symbol isLessThan, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/div.v:28]
-INFO: [VRFC 10-2458] undeclared symbol of, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/div.v:28]
-WARNING: [VRFC 10-2938] 'isNotEqual' is already implicitly declared on line 28 [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/div.v:42]
-WARNING: [VRFC 10-3380] identifier 'hilo' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/div.v:18]
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'div' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/div.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/counter_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module counter_tb
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'counter_tb' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/counter_tb.v:2]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/mult_ctrl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mult_ctrl
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'mult_ctrl' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/mult_ctrl.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_2
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'mux_2' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_2.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/barrel_shifter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module barrel_shifter
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'barrel_shifter' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/barrel_shifter.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/not_32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module not_32
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'not_32' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/not_32.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decoder
-INFO: [VRFC 10-2458] undeclared symbol nA0, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:7]
-INFO: [VRFC 10-2458] undeclared symbol nA1, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:8]
-INFO: [VRFC 10-2458] undeclared symbol nA2, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:9]
-INFO: [VRFC 10-2458] undeclared symbol nA3, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:10]
-INFO: [VRFC 10-2458] undeclared symbol nA4, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:11]
-INFO: [VRFC 10-2458] undeclared symbol a0, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:20]
-INFO: [VRFC 10-2458] undeclared symbol a1, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:21]
-INFO: [VRFC 10-2458] undeclared symbol a2, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:22]
-INFO: [VRFC 10-2458] undeclared symbol a3, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:23]
-INFO: [VRFC 10-2458] undeclared symbol a4, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:24]
-INFO: [VRFC 10-2458] undeclared symbol a5, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:25]
-INFO: [VRFC 10-2458] undeclared symbol a6, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:26]
-INFO: [VRFC 10-2458] undeclared symbol a7, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:27]
-INFO: [VRFC 10-2458] undeclared symbol a8, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:29]
-INFO: [VRFC 10-2458] undeclared symbol a9, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:30]
-INFO: [VRFC 10-2458] undeclared symbol a10, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:31]
-INFO: [VRFC 10-2458] undeclared symbol a11, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:32]
-INFO: [VRFC 10-2458] undeclared symbol a12, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:33]
-INFO: [VRFC 10-2458] undeclared symbol a13, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:34]
-INFO: [VRFC 10-2458] undeclared symbol a14, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:35]
-INFO: [VRFC 10-2458] undeclared symbol a15, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:36]
-INFO: [VRFC 10-2458] undeclared symbol a16, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:38]
-INFO: [VRFC 10-2458] undeclared symbol a17, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:39]
-INFO: [VRFC 10-2458] undeclared symbol a18, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:40]
-INFO: [VRFC 10-2458] undeclared symbol a19, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:41]
-INFO: [VRFC 10-2458] undeclared symbol a20, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:42]
-INFO: [VRFC 10-2458] undeclared symbol a21, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:43]
-INFO: [VRFC 10-2458] undeclared symbol a22, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:44]
-INFO: [VRFC 10-2458] undeclared symbol a23, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:45]
-INFO: [VRFC 10-2458] undeclared symbol a24, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:47]
-INFO: [VRFC 10-2458] undeclared symbol a25, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:48]
-INFO: [VRFC 10-2458] undeclared symbol a26, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:49]
-INFO: [VRFC 10-2458] undeclared symbol a27, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:50]
-INFO: [VRFC 10-2458] undeclared symbol a28, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:51]
-INFO: [VRFC 10-2458] undeclared symbol a29, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:52]
-INFO: [VRFC 10-2458] undeclared symbol a30, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:53]
-INFO: [VRFC 10-2458] undeclared symbol a31, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:54]
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'decoder' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/decoder.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_8.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_8
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'mux_8' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_8.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/cla_adder_32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cla_adder_32
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'cla_adder_32' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/cla_adder_32.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_4.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_4
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'mux_4' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_4.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/or_32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module or_32
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'or_32' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/or_32.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/comp_8.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module comp_8
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'comp_8' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/comp_8.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_16.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_16
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'mux_16' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_16.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/dffe_ref.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dffe_ref
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'dffe_ref' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/dffe_ref.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/shift8.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shift8
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'shift8' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/shift8.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_8_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_8_2
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'mux_8_2' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_8_2.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/and_32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module and_32
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'and_32' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/and_32.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/shift4.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shift4
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'shift4' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/shift4.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'ROM' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/ROM.v:2]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/multdiv_tb_brady.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multdiv_tb_brady
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'multdiv_tb_brady' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/multdiv_tb_brady.v:2]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module processor
-INFO: [VRFC 10-2458] undeclared symbol to_stall, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:70]
-WARNING: [VRFC 10-2938] 'to_stall' is already implicitly declared on line 70 [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:100]
-INFO: [VRFC 10-2458] undeclared symbol data_resultRDY, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:165]
-INFO: [VRFC 10-2458] undeclared symbol exception, assumed default net type wire [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:250]
-WARNING: [VRFC 10-2938] 'exception' is already implicitly declared on line 250 [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:256]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:76]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:77]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:79]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:80]
-WARNING: [VRFC 10-3380] identifier 'jump_calc' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:81]
-WARNING: [VRFC 10-3380] identifier 'ctrl_dx_out' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:82]
-WARNING: [VRFC 10-3380] identifier 'dx_out_A' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:83]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:90]
-WARNING: [VRFC 10-3380] identifier 'fd_rs' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:91]
-WARNING: [VRFC 10-3380] identifier 'fd_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:92]
-WARNING: [VRFC 10-3380] identifier 'fd_rs' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:93]
-WARNING: [VRFC 10-3380] identifier 'fd_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:94]
-WARNING: [VRFC 10-3380] identifier 'fd_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:95]
-WARNING: [VRFC 10-3380] identifier 'fd_rs' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:96]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:97]
-WARNING: [VRFC 10-3380] identifier 'fd_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:98]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:104]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:105]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:106]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:107]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:108]
-WARNING: [VRFC 10-3380] identifier 'dx_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:109]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:135]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:136]
-WARNING: [VRFC 10-3380] identifier 'ctrl_mw_out' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:137]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:138]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:139]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:140]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:141]
-WARNING: [VRFC 10-3380] identifier 'pw_ready' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:142]
-WARNING: [VRFC 10-3380] identifier 'sw_reg' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:144]
-WARNING: [VRFC 10-3380] identifier 'sw_data' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:149]
-WARNING: [VRFC 10-3380] identifier 'pw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:191]
-WARNING: [VRFC 10-3380] identifier 'pw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:192]
-WARNING: [VRFC 10-3380] identifier 'xm_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:194]
-WARNING: [VRFC 10-3380] identifier 'xm_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:195]
-WARNING: [VRFC 10-3380] identifier 'xm_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:196]
-WARNING: [VRFC 10-3380] identifier 'mw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:198]
-WARNING: [VRFC 10-3380] identifier 'mw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:199]
-WARNING: [VRFC 10-3380] identifier 'mw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:200]
-WARNING: [VRFC 10-3380] identifier 'ctrl_lw_d' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:201]
-WARNING: [VRFC 10-3380] identifier 'pw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:206]
-WARNING: [VRFC 10-3380] identifier 'pw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:207]
-WARNING: [VRFC 10-3380] identifier 'xm_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:209]
-WARNING: [VRFC 10-3380] identifier 'xm_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:210]
-WARNING: [VRFC 10-3380] identifier 'mw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:212]
-WARNING: [VRFC 10-3380] identifier 'mw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:213]
-WARNING: [VRFC 10-3380] identifier 'ctrl_lw_d' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:214]
-WARNING: [VRFC 10-3380] identifier 'xm_alu_of' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:216]
-WARNING: [VRFC 10-3380] identifier 'mw_alu_of' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:217]
-WARNING: [VRFC 10-3380] identifier 'mw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:286]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:287]
-WARNING: [VRFC 10-3380] identifier 'mw_out_D' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:288]
-WARNING: [VRFC 10-3380] identifier 'mw_rd' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:290]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:291]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:292]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:293]
-WARNING: [VRFC 10-3380] identifier 'mw_op' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:294]
-WARNING: [VRFC 10-3380] identifier 'ctrl_lw_d' is used before its declaration [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:295]
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'processor' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/processor.v:20]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/cla_adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cla_adder
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'cla_adder' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/cla_adder.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/comp_32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module comp_32
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'comp_32' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/comp_32.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/tff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stepper_1021
 INFO: [VRFC 10-311] analyzing module tff
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'tff' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/tff.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/shift16.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shift16
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'shift16' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/shift16.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/RAM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RAM
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'RAM' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/RAM.v:2]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/counter_32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module counter_32
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'counter_32' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/counter_32.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/multdiv_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multdiv_tb
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'multdiv_tb' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/multdiv_tb.v:2]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/shift1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shift1
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'shift1' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/shift1.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/alu.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module alu
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'alu' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/alu.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_32
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'mux_32' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_32.v:1]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/alu_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module alu_tb
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'alu_tb' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/alu_tb.v:2]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_32_bus.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_32_bus
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'mux_32_bus' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/multdiv/regfile/alu/mux_32_bus.v:1]
+INFO: [VRFC 10-311] analyzing module tff_1142
+INFO: [VRFC 10-311] analyzing module tff_1143
+INFO: [VRFC 10-311] analyzing module tff_1144
+INFO: [VRFC 10-311] analyzing module tff_1145
+INFO: [VRFC 10-311] analyzing module tff_1153
+INFO: [VRFC 10-311] analyzing module tff_1154
+INFO: [VRFC 10-311] analyzing module tff_1155
+INFO: [VRFC 10-311] analyzing module tff_1156
+INFO: [VRFC 10-311] analyzing module tff_1157
+INFO: [VRFC 10-311] analyzing module tff_1158
+INFO: [VRFC 10-311] analyzing module glbl

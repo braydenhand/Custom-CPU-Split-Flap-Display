@@ -1,0 +1,55 @@
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 69628c6bba664eb9a1d99b5cfb75aa9b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Wrapper_behav xil_defaultlib.Wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 8 for port 'addr' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/Wrapper.v:71]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'dataIn' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/Wrapper.v:72]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'dataOut' [C:/Users/bkh18/ece350-newfinal/final2.srcs/sim_1/imports/ece350-newfinal/final2.srcs/sources_1/imports/processor/Wrapper.v:73]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dffe_ref
+Compiling module xil_defaultlib.register_default
+Compiling module xil_defaultlib.full_adder
+Compiling module xil_defaultlib.cla_adder
+Compiling module xil_defaultlib.cla_adder_32
+Compiling module xil_defaultlib.register(WIDTH=64)
+Compiling module xil_defaultlib.register(WIDTH=128)
+Compiling module xil_defaultlib.register(WIDTH=1)
+Compiling module xil_defaultlib.not_32
+Compiling module xil_defaultlib.and_32
+Compiling module xil_defaultlib.or_32
+Compiling module xil_defaultlib.shift16
+Compiling module xil_defaultlib.mux_2
+Compiling module xil_defaultlib.shift8
+Compiling module xil_defaultlib.shift4
+Compiling module xil_defaultlib.shift2
+Compiling module xil_defaultlib.shift1
+Compiling module xil_defaultlib.barrel_shifter
+Compiling module xil_defaultlib.mux_4
+Compiling module xil_defaultlib.mux_8
+Compiling module xil_defaultlib.mux_16
+Compiling module xil_defaultlib.mux_32
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.register(WIDTH=70)
+Compiling module xil_defaultlib.register(WIDTH=39)
+Compiling module xil_defaultlib.tff
+Compiling module xil_defaultlib.counter
+Compiling module xil_defaultlib.register(WIDTH=66)
+Compiling module xil_defaultlib.mult_ctrl
+Compiling module xil_defaultlib.mult
+Compiling module xil_defaultlib.counter_32
+Compiling module xil_defaultlib.div
+Compiling module xil_defaultlib.multdiv
+Compiling module xil_defaultlib.register(WIDTH=129)
+Compiling module xil_defaultlib.processor
+Compiling module xil_defaultlib.ROM(MEMFILE="addi_basic.mem.mem"...
+Compiling module xil_defaultlib.decoder
+Compiling module xil_defaultlib.regfile_default
+Compiling module xil_defaultlib.RAM
+Compiling module xil_defaultlib.Wrapper
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Wrapper_behav

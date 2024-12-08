@@ -72,8 +72,6 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
-set_msg_config -id {HDL 9-1061} -limit 100000
-set_msg_config -id {HDL 9-1654} -limit 100000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -133,6 +131,7 @@ read_mem {
   C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/addi_basic.mem
   C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/nop.mem
   C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/jr.mem
+  C:/Users/bkh18/ece350-newfinal/ece_final.mem
 }
 read_verilog -library xil_defaultlib {
   C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/new/stepper.v

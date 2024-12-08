@@ -7,7 +7,8 @@ module stepper(
     inout ps2_data,
     input my_turn,
     output wire i_updated_wire,
-    output reg [15:0] LED
+    output reg [15:0] LED,
+    input [31:0] curr_reg
     );
     reg [9:0] data_delay;
     reg [31:0] target; 
@@ -26,6 +27,7 @@ module stepper(
    
     wire read_data, busy, err;
     wire [9:0] posData;
+    wire [7:0] scancode;
     //
     
     
@@ -56,16 +58,17 @@ module stepper(
         .dataOut(posData),                      // ASCII data output
         .wEn(1'b0));        
  
-
- 
+    reg [14:0] clk_check;
+    
  always @(posedge CLK100MHZ) begin
-    LED <= 16'b111111;
+    LED = {target[15:0]};
 end
  
  
 assign JA = control;
 //    assign LED = {current[15:0]};  // width to match LED[15:0]
     always @(posedge CLK100MHZ) begin
+        i_updated = (scancode == 8'b01001100);
         // Add reset synchronization
         if (BTNR) begin
             check_target <= 25'b0;
@@ -81,7 +84,6 @@ assign JA = control;
       if (!accept_new_key) begin // if you arent currently ready to accept input
             if (!read_data) begin // button is let go
                 accept_new_key =1'b1; //accept new input
-                i_updated = 1'b0;
             end
         end
         if (read_data && accept_new_key) begin // if we press a button and we arent currently processing a button
@@ -90,10 +92,11 @@ assign JA = control;
             end 
             if (data_delay == 10'b1) begin // timer is done
                 data_delay = 10'b0; // reset timer
-                if (posData != 10'b0 && !BTNR ) begin
-                    target = posData; //get the key position
-                    i_updated = 1'b1;
-                end
+                //curr_reg == 32'b00100000000000000000000000000000
+//                if (1'b1) begin // magic number that we set all our registers to so we know we are ready to take inputs
+                    if (posData != 10'b0 && !BTNR && my_turn) begin
+                        target = posData; //get the key position
+                    end
                     
                 accept_new_key = 1'b0; // dont accept any more input until button is let go
             end

@@ -22,11 +22,13 @@
 module processor(
     BTNR,
     JB,
-    JA,
+    JA1,
+    JA2,
     ps2_clk,
     ps2_data,
     
     // Control signals
+    stepper_clock,
     clock,                          // I: The master clock
     reset,                          // I: A reset signal
 
@@ -56,15 +58,16 @@ module processor(
 	
 	input BTNR;
 	
-	input [1:0] JB;
-	output [4:1] JA;
+	input [2:1] JB;
+	output [4:1] JA1;
+    output [4:1] JA2;
 	inout ps2_clk;
 	inout ps2_data;
 	 
 	
 
 	// Control signals
-	input clock, reset;
+	input clock, reset, stepper_clock;
 	// Imem
     output [31:0] address_imem;
 	input [31:0] q_imem;
@@ -81,7 +84,9 @@ module processor(
 	input [31:0] data_readRegA, data_readRegB;
 	
 	output reg [15:0] LED;
-	wire [15:0] LED_wire;
+	wire [15:0] LED_wire1;
+	wire [15:0] LED_wire2;
+	
 
 	/* YOUR CODE STARTS HERE */
 	
@@ -367,24 +372,42 @@ wire [31:0] alu_b_bypass =
 
 
 ////////////////////////////////              STEPPERS                /////////////////////////////////////////////////////////////////////
-
-    reg [2:0] curr_reel; 
-    wire [5:0] update;
-    always @(posedge CLK100MHZ) begin
-        if ((curr_reel == 3'b000 && update[0]) ||
-        (curr_reel == 3'b001 && update[1]) || 
-        (curr_reel == 3'b010 && update[2])) begin
-        curr_reel = curr_reel + 1;
-        end
+    reg [31:0] curr_reg1;
+    reg [31:0] curr_reg2;
+    
+    always @(negedge clock) begin
+        if (sw_reg == 5'b00001) curr_reg1 = sw_data;
+        if (sw_reg == 5'b00010) curr_reg2 = sw_data;
     end
 
-    // todo: pass inouts from board to top level module and all the way down
-    stepper stepper1(CLK100MHZ, BTNR, JB, JA, ps2_clk, ps2_data,(curr_reel == 3'b000),update[0], LED_wire);
-    
-    
+    reg curr_reel; 
+    wire [5:0] update;
+    reg just_updated;
+    reg slow_clock;
+    reg [24:0] slow_clock_div;
     always @(posedge clock) begin
-//        LED <= 16'b1;
-        LED <= LED_wire;
+        slow_clock_div = slow_clock_div + 1;
+        if (slow_clock_div == 25'b1) begin
+                if (!just_updated && update[0]) curr_reel = ~curr_reel;
+                just_updated <= update[0];       
+        end
+//        if ((curr_reel == 3'b000 && update[0]) ||
+//        (curr_reel == 3'b001 && update[1]) || 
+//        (curr_reel == 3'b010 && update[2])) begin
+//        curr_reel = curr_reel + 1;
+//        end
+
+    end
+//(curr_reel == 3'b000)
+    // todo: pass inouts from board to top level module and all the way down
+    stepper stepper1(stepper_clock, BTNR, JB[1], JA1[4:1], ps2_clk, ps2_data,(curr_reel == 1'b0),update[0], LED_wire1, curr_reg1);
+    stepper stepper2(stepper_clock, BTNR, JB[2], JA2[4:1], ps2_clk, ps2_data,(curr_reel == 1'b1),update[1], LED_wire2, curr_reg2);
+    reg [30:0] ps2_check; 
+    always @(posedge stepper_clock) begin
+    if (!ps2_clk) begin
+        ps2_check = ps2_check + 1; 
+    end    
+        LED <= {curr_reel, just_updated, curr_reg1[12:0]};
     end
 
 	/* END CODE */
