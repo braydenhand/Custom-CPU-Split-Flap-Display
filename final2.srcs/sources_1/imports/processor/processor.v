@@ -69,7 +69,7 @@ module processor(
 	
 	input BTNR;
 	
-	input [2:1] JB;
+	input [2:0] JB;
 	output [4:1] JA1;
     output [4:1] JA2;
 	inout ps2_clk;
@@ -409,7 +409,7 @@ wire [31:0] alu_b_bypass =
     wire [5:0] update;
     reg just_updated;
     reg slow_clock;
-    reg [24:0] slow_clock_div;
+    reg [12:0] slow_clock_div;
     always @(posedge clock) begin
         slow_clock_div = slow_clock_div + 1;
         if (slow_clock_div == 25'b1) begin
@@ -432,7 +432,7 @@ wire [31:0] alu_b_bypass =
     if (!ps2_clk) begin
         ps2_check = ps2_check + 1; 
     end    
-        LED <= {LED_wire1};
+        LED <= {LED_wire1[15:0]};
     end
 
 	/* END CODE */

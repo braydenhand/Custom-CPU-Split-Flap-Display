@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Sun Dec  8 16:16:01 2024
+| Date         : Sun Dec  8 17:51:06 2024
 | Host         : P1-04 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Wrapper_utilization_synth.rpt -pb Wrapper_utilization_synth.pb
 | Design       : Wrapper
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 2604 |     0 |          0 |     63400 |  4.11 |
-|   LUT as Logic             | 2588 |     0 |          0 |     63400 |  4.08 |
-|   LUT as Memory            |   16 |     0 |          0 |     19000 |  0.08 |
+| Slice LUTs*                | 2467 |     0 |          0 |     63400 |  3.89 |
+|   LUT as Logic             | 2453 |     0 |          0 |     63400 |  3.87 |
+|   LUT as Memory            |   14 |     0 |          0 |     19000 |  0.07 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
-|     LUT as Shift Register  |   16 |     0 |            |           |       |
-| Slice Registers            | 1912 |     0 |          0 |    126800 |  1.51 |
-|   Register as Flip Flop    | 1912 |     0 |          0 |    126800 |  1.51 |
+|     LUT as Shift Register  |   14 |     0 |            |           |       |
+| Slice Registers            | 1820 |     0 |          0 |    126800 |  1.44 |
+|   Register as Flip Flop    | 1820 |     0 |          0 |    126800 |  1.44 |
 |   Register as Latch        |    0 |     0 |          0 |    126800 |  0.00 |
 | F7 Muxes                   |  259 |     0 |          0 |     31700 |  0.82 |
 | F8 Muxes                   |    0 |     0 |          0 |     15850 |  0.00 |
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 1635  |          Yes |           - |        Reset |
 | 2     |          Yes |         Set |            - |
-| 275   |          Yes |       Reset |            - |
+| 183   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -94,7 +94,7 @@ Table of Contents
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   30 |     0 |          0 |       210 | 14.29 |
+| Bonded IOB                  |   31 |     0 |          0 |       210 | 14.76 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         6 |  0.00 |
@@ -151,18 +151,18 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDCE     | 1635 |        Flop & Latch |
-| LUT6     | 1511 |                 LUT |
-| LUT5     |  714 |                 LUT |
-| FDRE     |  275 |        Flop & Latch |
+| LUT6     | 1504 |                 LUT |
+| LUT5     |  564 |                 LUT |
 | MUXF7    |  259 |               MuxFx |
-| LUT3     |  255 |                 LUT |
-| LUT4     |  209 |                 LUT |
-| LUT2     |  167 |                 LUT |
-| CARRY4   |   29 |          CarryLogic |
+| LUT3     |  249 |                 LUT |
+| LUT4     |  205 |                 LUT |
+| LUT2     |  191 |                 LUT |
+| FDRE     |  183 |        Flop & Latch |
 | OBUF     |   24 |                  IO |
-| SRL16E   |   16 |  Distributed Memory |
-| LUT1     |   12 |                 LUT |
-| IBUF     |    6 |                  IO |
+| CARRY4   |   17 |          CarryLogic |
+| SRL16E   |   14 |  Distributed Memory |
+| LUT1     |   11 |                 LUT |
+| IBUF     |    7 |                  IO |
 | RAMB36E1 |    3 |        Block Memory |
 | OBUFT    |    2 |                  IO |
 | FDSE     |    2 |        Flop & Latch |

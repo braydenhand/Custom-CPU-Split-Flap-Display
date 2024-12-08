@@ -62,7 +62,7 @@ module stepper(
     reg [14:0] clk_check;
     
  always @(posedge CLK100MHZ) begin
-    LED = {target[15:0]};
+    LED = {init, JB, target[13:0]};
 //    LED = {16'b1111111111111111};
 
 end
@@ -87,67 +87,108 @@ assign JA = control;
             data_delay <= 10'b0;
             target <= 32'b0;
         end
-        else begin
-            if (!read_data) begin // button is let go
-                accept_new_key =1'b1; //accept new input
-            end
-            else if (read_data && accept_new_key) begin // if we press a button and we arent currently processing a button
-                if (data_delay != 10'b1) begin // start a timer
-                        data_delay = data_delay + 1; // wait till its done
-                end 
-                if (data_delay == 10'b1) begin // timer is done
-                    data_delay = 10'b0; // reset timer
-                        if (posData != 10'b0 && !BTNR && my_turn) begin
-                            target = posData; //get the key position
-                        end
-                        
-                    accept_new_key = 1'b0; // dont accept any more input until button is let go
+    
+                // Initialization and stepping logic
+        else if (!init) begin
+            count <= count + 1;
+            if (!JB[1]) begin // Magnet not found
+                if (count == 18'h3FFFF) begin  
+                    case (control)
+                        4'b1010: control <= 4'b0110;
+                        4'b0110: control <= 4'b0101;
+                        4'b0101: control <= 4'b1001;
+                        4'b1001: control <= 4'b1010;
+                        default: control <= 4'b1010;
+                    endcase
+                    count <= 18'b0;  // Reset count after state change
                 end
+            end 
+            else begin // Magnet found
+                init <= 1'b1;
+                current <= 32'b0;
             end
-//        end
-
-
-            // Initialization and stepping logic
-            if (!init) begin
+        end  
+        else begin // Normal operation
+            if (current != target) begin
                 count <= count + 1;
-                if (JB[1]) begin // Magnet not found
-                    if (count == 18'h3FFFF) begin  
-                        case (control)
-                            4'b1010: control <= 4'b0110;
-                            4'b0110: control <= 4'b0101;
-                            4'b0101: control <= 4'b1001;
-                            4'b1001: control <= 4'b1010;
-                            default: control <= 4'b1010;
-                        endcase
-                        count <= 18'b0;  // Reset count after state change
+                if (count == 18'h3FFFF) begin
+                    case (control)
+                        4'b1010: control <= 4'b0110;
+                        4'b0110: control <= 4'b0101;
+                        4'b0101: control <= 4'b1001;
+                        4'b1001: control <= 4'b1010;
+                        default: control <= 4'b1010;
+                    endcase
+                    count <= 18'b0;  // Reset count
+                    if (current < 800) begin  // Position limit check
+                        current <= current + 1;
                     end
-                end 
-                else begin // Magnet found
-                    init <= 1'b1;
-                    current <= 32'b0;
-                end
-            end  
-            else begin // Normal operation
-                if (current != target) begin
-                    count <= count + 1;
-                    if (count == 18'h3FFFF) begin
-                        case (control)
-                            4'b1010: control <= 4'b0110;
-                            4'b0110: control <= 4'b0101;
-                            4'b0101: control <= 4'b1001;
-                            4'b1001: control <= 4'b1010;
-                            default: control <= 4'b1010;
-                        endcase
-                        count <= 18'b0;  // Reset count
-                        if (current < 800) begin  // Position limit check
-                            current <= current + 1;
-                        end
-                        else begin
-                            current <= 32'b0;
-                        end
+                    else begin
+                        current <= 32'b0;
                     end
                 end
             end
         end
-    end 
+        
+        if (!read_data) begin // button is let go
+            accept_new_key =1'b1; //accept new input
+        end
+        else if (read_data && accept_new_key) begin // if we press a button and we arent currently processing a button
+            if (data_delay != 10'b1) begin // start a timer
+                    data_delay = data_delay + 1; // wait till its done
+            end 
+            if (data_delay == 10'b1) begin // timer is done
+                data_delay = 10'b0; // reset timer
+                    if (posData != 10'b0 && !BTNR && my_turn) begin
+                        target = posData; //get the key position
+                    end
+                    
+                accept_new_key = 1'b0; // dont accept any more input until button is let go
+            end
+        end
+
+
+            // Initialization and stepping logic
+//            if (!init) begin
+//                count <= count + 1;
+//                if (!JB[1]) begin // Magnet not found
+//                    if (count == 18'h3FFFF) begin  
+//                        case (control)
+//                            4'b1010: control <= 4'b0110;
+//                            4'b0110: control <= 4'b0101;
+//                            4'b0101: control <= 4'b1001;
+//                            4'b1001: control <= 4'b1010;
+//                            default: control <= 4'b1010;
+//                        endcase
+//                        count <= 18'b0;  // Reset count after state change
+//                    end
+//                end 
+//                else begin // Magnet found
+//                    init <= 1'b1;
+//                    current <= 32'b0;
+//                end
+//            end  
+//            else begin // Normal operation
+//                if (current != target) begin
+//                    count <= count + 1;
+//                    if (count == 18'h3FFFF) begin
+//                        case (control)
+//                            4'b1010: control <= 4'b0110;
+//                            4'b0110: control <= 4'b0101;
+//                            4'b0101: control <= 4'b1001;
+//                            4'b1001: control <= 4'b1010;
+//                            default: control <= 4'b1010;
+//                        endcase
+//                        count <= 18'b0;  // Reset count
+//                        if (current < 800) begin  // Position limit check
+//                            current <= current + 1;
+//                        end
+//                        else begin
+//                            current <= 32'b0;
+//                        end
+//                    end
+//                end
+//            end
+        end
+     
 endmodule
