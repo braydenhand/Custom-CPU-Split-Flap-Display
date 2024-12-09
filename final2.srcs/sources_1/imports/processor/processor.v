@@ -24,6 +24,7 @@ module processor(
     JB,
     JA1,
     JA2,
+    JB3,
     ps2_clk,
     ps2_data,
     
@@ -60,6 +61,7 @@ module processor(
     // The registers that control targets of the units
     register1,
     register2,
+    register3,
     
     // Switches for mode control
     SW
@@ -69,9 +71,10 @@ module processor(
 	
 	input BTNR;
 	
-	input [2:0] JB;
+	input [3:0] JB;
 	output [4:1] JA1;
     output [4:1] JA2;
+    output [4:1] JB3;
 	inout ps2_clk;
 	inout ps2_data;
 	 
@@ -100,6 +103,7 @@ module processor(
 	// registers for controlling target for barrel units
 	input [31:0] register1;
 	input [31:0] register2;
+	input [31:0] register3;
 	
 	// switches for animation vs keyboard
     input [15:0] SW;
@@ -107,6 +111,7 @@ module processor(
     	
 	wire [15:0] LED_wire1;
 	wire [15:0] LED_wire2;
+	wire [15:0] LED_wire3;
 	
 	assign fd_op_test = fd_op;
 	
@@ -405,7 +410,7 @@ wire [31:0] alu_b_bypass =
         if (sw_reg == 5'b00010) curr_reg2 = sw_data;
     end
 
-    reg curr_reel; 
+    reg [1:0] curr_reel; 
     wire [5:0] update;
     reg just_updated;
     reg slow_clock;
@@ -413,7 +418,7 @@ wire [31:0] alu_b_bypass =
     always @(posedge clock) begin
         slow_clock_div = slow_clock_div + 1;
         if (slow_clock_div == 25'b1) begin
-                if (!just_updated && update[0]) curr_reel = ~curr_reel;
+                if (!just_updated && update[0] || curr_reel == 2'b00) curr_reel = curr_reel+1;
                 just_updated <= update[0];       
         end
 //        if ((curr_reel == 3'b000 && update[0]) ||
@@ -425,14 +430,12 @@ wire [31:0] alu_b_bypass =
     end
 //(curr_reel == 3'b000)
     // todo: pass inouts from board to top level module and all the way down
-    stepper stepper1(stepper_clock, BTNR, JB[1], JA1[4:1], ps2_clk, ps2_data,(curr_reel == 1'b0),update[0], LED_wire1, register1, SW);
-    stepper stepper2(stepper_clock, BTNR, JB[2], JA2[4:1], ps2_clk, ps2_data,(curr_reel == 1'b1),update[1], LED_wire2, register2, SW);
-    reg [30:0] ps2_check; 
-    always @(posedge stepper_clock) begin
-    if (!ps2_clk) begin
-        ps2_check = ps2_check + 1; 
-    end    
-        LED <= {LED_wire1[15:0]};
+    stepper stepper1(stepper_clock, BTNR, JB[1], JA1[4:1], ps2_clk, ps2_data,(curr_reel == 2'b01),update[0], LED_wire1, register1, SW);
+    stepper stepper2(stepper_clock, BTNR, JB[2], JA2[4:1], ps2_clk, ps2_data,(curr_reel == 2'b10),update[1], LED_wire2, register2, SW);
+    stepper stepper3(stepper_clock, BTNR, JB[2], JB3[4:1], ps2_clk, ps2_data,(curr_reel == 2'b11),update[2], LED_wire3, register3, SW); // @TODO: change JB on this one
+
+    always @(posedge stepper_clock) begin   
+        LED <= {LED_wire3[15:0]};
     end
 
 	/* END CODE */

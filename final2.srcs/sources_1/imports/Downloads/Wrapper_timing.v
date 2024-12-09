@@ -27,9 +27,10 @@
 module Wrapper (
     input clk_100mhz,
     input BTNU, BTNR,
-    input [2:0] JB,
+    input [3:0] JB,
     output [4:1] JA1,
     output [4:1] JA2,
+    output [4:1] JB3,
     inout ps2_clk,
     inout ps2_data,
     
@@ -106,7 +107,8 @@ module Wrapper (
 		
 		// stepper
 		.BTNR(BTNR), .JB(JB),
-		.JA1(JA1), .JA2(JA2), .ps2_clk(ps2_clk),
+		.JA1(JA1), .JA2(JA2), .JB3(JB3),
+		.ps2_clk(ps2_clk),
 		.ps2_data(ps2_data),
 		
 		.LED(LED_wire),
@@ -115,6 +117,7 @@ module Wrapper (
 		// Registers for stepper targets
 		.register1(register1),
 		.register2(register2),
+		.register3(register3),
 		
 		// switches for mode control
         .SW(SW)		
@@ -140,12 +143,13 @@ module Wrapper (
 	
 	wire [31:0] register1; 
 	wire [31:0] register2;
+	wire [31:0] register3;
 	// Register File
 	regfile RegisterFile(.clock(cpu_clock), 
 		.ctrl_writeEnable(rwe), .ctrl_reset(reset), 
 		.ctrl_writeReg(rd),
 		.ctrl_readRegA(rs1), .ctrl_readRegB(rs2), 
-		.data_writeReg(rData), .data_readRegA(regA), .data_readRegB(regB), .register1(register1),.register2(register2));
+		.data_writeReg(rData), .data_readRegA(regA), .data_readRegB(regB), .register1(register1),.register2(register2),.register3(register3));
 						
 	// Processor Memory (RAM)
 	RAM ProcMem(.clk(cpu_clock), 

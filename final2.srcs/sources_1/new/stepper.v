@@ -1,7 +1,7 @@
 module stepper(
     input CLK100MHZ, 
     input BTNR, 
-    input [1:0] JB,
+    input JB,
     output [4:1] JA,
     inout ps2_clk,
     inout ps2_data,
@@ -74,6 +74,9 @@ assign JA = control;
         i_updated = (scancode == 8'b01001100);
         // do animation mode if SW[0] is on
         if (SW[0]) target = curr_reg;
+        if (JB == 1'b1) begin
+         current <= 32'b0;
+         end
 //        else begin // else, get keyboard input
 
         // Add reset synchronization
@@ -88,27 +91,7 @@ assign JA = control;
             target <= 32'b0;
         end
     
-                // Initialization and stepping logic
-        else if (!init) begin
-            count <= count + 1;
-            if (!JB[1]) begin // Magnet not found
-                if (count == 18'h3FFFF) begin  
-                    case (control)
-                        4'b1010: control <= 4'b0110;
-                        4'b0110: control <= 4'b0101;
-                        4'b0101: control <= 4'b1001;
-                        4'b1001: control <= 4'b1010;
-                        default: control <= 4'b1010;
-                    endcase
-                    count <= 18'b0;  // Reset count after state change
-                end
-            end 
-            else begin // Magnet found
-                init <= 1'b1;
-                current <= 32'b0;
-            end
-        end  
-        else begin // Normal operation
+                // stepping logic
             if (current != target) begin
                 count <= count + 1;
                 if (count == 18'h3FFFF) begin
@@ -128,7 +111,6 @@ assign JA = control;
                     end
                 end
             end
-        end
         
         if (!read_data) begin // button is let go
             accept_new_key =1'b1; //accept new input
