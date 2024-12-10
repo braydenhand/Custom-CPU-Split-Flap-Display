@@ -28,10 +28,13 @@
 module Wrapper (
     input clk_100mhz,
     input BTNU, BTNR,
-    input [3:0] JB,
+    input [6:1] JB,
     output [4:1] JA1,
     output [4:1] JA2,
-    output [4:1] JB3,
+    output [4:1] JC1,
+    output [4:1] JC2,
+    output [4:1] JD1,
+    output [4:1] JD2,
     inout ps2_clk,
     inout ps2_data,
     
@@ -90,7 +93,7 @@ module Wrapper (
     end
     
     wire [15:0] LED_wire;
-    
+     
     // hello
     
 	// Main Processing Unit
@@ -110,7 +113,7 @@ module Wrapper (
 		
 		// stepper
 		.BTNR(BTNR), .JB(JB),
-		.JA1(JA1), .JA2(JA2), .JB3(JB3),
+		.JA1(JA1), .JA2(JA2), .JC1(JC1), .JC2(JC2), .JD1(JD1), .JD2(JD2),
 		.ps2_clk(ps2_clk),
 		.ps2_data(ps2_data),
 		
@@ -121,7 +124,9 @@ module Wrapper (
 		.register1(register1),
 		.register2(register2),
 		.register3(register3),
-		
+		.register4(register4),
+		.register5(register5),
+		.register6(register6),
 		// switches for mode control
         .SW(SW)		
 		
@@ -147,12 +152,16 @@ module Wrapper (
 	wire [31:0] register1; 
 	wire [31:0] register2;
 	wire [31:0] register3;
+	wire [31:0] register4; 
+	wire [31:0] register5;
+	wire [31:0] register6;
 	// Register File
 	regfile RegisterFile(.clock(cpu_clock), 
 		.ctrl_writeEnable(rwe), .ctrl_reset(reset), 
 		.ctrl_writeReg(rd),
 		.ctrl_readRegA(rs1), .ctrl_readRegB(rs2), 
-		.data_writeReg(rData), .data_readRegA(regA), .data_readRegB(regB), .register1(register1),.register2(register2),.register3(register3));
+		.data_writeReg(rData), .data_readRegA(regA), .data_readRegB(regB), .register1(register1),.register2(register2),.register3(register3),
+		.register4(register4),.register5(register5),.register6(register6));
 						
 	// Processor Memory (RAM)
 	RAM ProcMem(.clk(cpu_clock), 

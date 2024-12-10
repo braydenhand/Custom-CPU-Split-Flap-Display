@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Mon Dec  9 22:32:18 2024
+| Date         : Tue Dec 10 05:15:21 2024
 | Host         : P1-04 running 64-bit major release  (build 9200)
 | Command      : report_drc -file Wrapper_drc_opted.rpt -pb Wrapper_drc_opted.pb -rpx Wrapper_drc_opted.rpx
 | Design       : Wrapper
@@ -24,13 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 23
+             Violations found: 22
 +-----------+----------+-----------------------------------------------------+------------+
 | Rule      | Severity | Description                                         | Violations |
 +-----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
 | CHECK-3   | Warning  | Report rule limit reached                           | 1          |
-| PLIO-3    | Warning  | Placement Constraints Check for IO constraints      | 1          |
 | REQP-1839 | Warning  | RAMB36 async control check                          | 20         |
 +-----------+----------+-----------------------------------------------------+------------+
 
@@ -52,11 +51,6 @@ Related violations: <none>
 CHECK-3#1 Warning
 Report rule limit reached  
 REQP-1839 rule limit reached: 20 violations have been found.
-Related violations: <none>
-
-PLIO-3#1 Warning
-Placement Constraints Check for IO constraints  
-Partially locked IO Bus is found. Following components of the IO Bus JB[3:0] are not locked:  JB[0]
 Related violations: <none>
 
 REQP-1839#1 Warning

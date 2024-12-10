@@ -1,19 +1,119 @@
-addi $r1, $r0, 75 # Spells ECE350
+# go around once to find 0;
+addi $r1, $r0, 200
 nop
 nop
-addi $r2, $r0, 38
+addi $r2, $r0, 200
 nop
 nop
-addi $r3, $r0, 75
+addi $r3, $r0, 200
 nop
 nop
-addi $r4, $r0, 544
+addi $r4, $r0, 200
 nop
 nop
-addi $r5, $r0, 581
+addi $r5 , $r0, 200
 nop
 nop
-addi $r6, $r0, 488
+addi $r6 , $r0, 200
+nop 
+nop
+addi $r7, $r0, 0 # Initializes a counter in register 7
+nop
+nop
+addi $r8, $r0, 10000000 # Initializes the counter completion in register 8, 50,000,000 cycles
+nop
+nop
+topwait1:
+nop
+nop
+addi $r7, $r7, 1 # r7 += 1
+nop
+nop
+blt $r7, $r8, topwait1 # while r7 < 50,000,000, go back to wait
+nop
+nop
+addi $r1, $r0, 220
+nop
+nop
+addi $r2, $r0, 220
+nop
+nop
+addi $r3, $r0, 220
+nop
+nop
+addi $r4, $r0, 220
+nop
+nop
+addi $r5 , $r0, 220
+nop
+nop
+addi $r6 , $r0, 220
+nop 
+nop
+addi $r7, $r0, 0 # Initializes a counter in register 7
+nop
+nop
+addi $r8, $r0, 10000000 # Initializes the counter completion in register 8, 50,000,000 cycles
+nop
+nop
+topwait2:
+nop
+nop
+addi $r7, $r7, 1 # r7 += 1
+nop
+nop
+blt $r7, $r8, topwait2 # while r7 < 50,000,000, go back to wait
+nop
+nop
+addi $r1, $r0, 200
+nop
+nop
+addi $r2, $r0, 200
+nop
+nop
+addi $r3, $r0, 200
+nop
+nop
+addi $r4, $r0, 200
+nop
+nop
+addi $r5, $r0, 200
+nop
+nop
+addi $r6, $r0, 200
+nop
+nop
+addi $r7, $r0, 0 # Initializes a counter in register 7
+nop
+nop
+addi $r8, $r0, 10000000 # Initializes the counter completion in register 8, 50,000,000 cycles
+nop
+nop
+topwait3:
+nop
+nop
+addi $r7, $r7, 1 # r7 += 1
+nop
+nop
+blt $r7, $r8, topwait3 # while r7 < 50,000,000, go back to wait
+nop 
+nop
+addi $r1, $r0, 80 # Spells ECE350
+nop
+nop
+addi $r2, $r0, 40
+nop
+nop
+addi $r3, $r0, 80
+nop
+nop
+addi $r4, $r0, 580
+nop
+nop
+addi $r5, $r0, 620
+nop
+nop
+addi $r6, $r0, 520
 nop
 nop
 addi $r7, $r0, 0 # Initializes a counter in register 7
@@ -32,22 +132,22 @@ blt $r7, $r8, wait # while r7 < 50,000,000, go back to wait
 nop
 nop
 
-addi $r1, $r0, 131 # HELLO
+addi $r1, $r0, 144 # HELLO
 nop
 nop
-addi $r2, $r0, 75
+addi $r2, $r0, 80
 nop
 nop
-addi $r3, $r0, 206
+addi $r3, $r0, 220
 nop
 nop
-addi $r4, $r0, 206
+addi $r4, $r0, 220
 nop
 nop
-addi $r5, $r0, 263
+addi $r5, $r0, 280
 nop
 nop
-addi $r6, $r0, 750 # We should save this flap for a blank flap, don't always want to be displaying 
+addi $r6, $r0, 780 # We should save this flap for a blank flap, don't always want to be displaying 
 nop
 nop
 addi $r7, $r0, 0 # Initializes a counter in register 7
@@ -66,22 +166,22 @@ blt $r7, $r8, wait2 # while r7 < 50,000,000, go back to wait
 nop
 nop
 
-addi $r1, $r0, 413 # WORLD
+addi $r1, $r0, 440 # WORLD
 nop
 nop
-addi $r2, $r0, 263
+addi $r2, $r0, 270
 nop
 nop
-addi $r3, $r0, 319
+addi $r3, $r0, 340
 nop
 nop
-addi $r4, $r0, 206
+addi $r4, $r0, 220
 nop
 nop
-addi $r5, $r0, 56
+addi $r5, $r0, 60
 nop
 nop
-addi $r6, $r0, 750 # BLANK
+addi $r6, $r0, 780 # BLANK
 nop
 nop
 addi $r7, $r0, 0 # Initializes a counter in register 7
@@ -100,7 +200,7 @@ blt $r7, $r8, wait3 # while r7 < 50,000,000, go back to wait
 nop
 nop
 
-addi $r1, $r0, 0 # AAAAAAA for cool animation
+addi $r1, $r0, 1 # AAAAAAA for cool animation
 nop
 nop
 addi $r2, $r0, 0
@@ -148,14 +248,13 @@ nop
 addi $r7, $r0, 0 # Initializes a counter in register 7
 nop
 nop
-addi $r9, $r0, 5000000 # Initializes the counter completion in register 9, 5,000,000 cycles
+addi $r9, $r0, 10000 # Initializes the counter completion in register 9, 5,000,000 cycles
 nop
 nop
-
-addi $r3, $r0, 19
+addi $r3, $r0, 20
 nop
 nop
-addi $r4, $r0, 19
+addi $r4, $r0, 20
 nop
 nop
 smallwait1:
@@ -168,10 +267,10 @@ blt $r7, $r9, smallwait1 # while r7 < 5,000,000, go back to wait
 nop
 nop
 
-addi $r2, $r0, 19
+addi $r2, $r0, 20
 nop
 nop
-addi $r5, $r0, 19
+addi $r5, $r0, 20
 nop
 nop
 addi $r7, $r0, 0 # Initializes a counter in register 7
@@ -183,14 +282,14 @@ nop
 addi $r7, $r7, 1 # r7 += 1
 nop
 nop
-blt $r9, $r7, smallwait2 # while r7 < 5,000,000, go back to wait
+blt $r7, $r9, smallwait2 # while r7 < 5,000,000, go back to wait
 nop
 nop
 
-addi $r1, $r0, 19
+addi $r1, $r0, 20
 nop
 nop
-addi $r6, $r0, 19
+addi $r6, $r0, 20
 nop
 nop
 addi $r7, $r0, 0 # Initializes a counter in register 7
@@ -209,16 +308,16 @@ nop
 addi $r7, $r0, 0 # Initializes a counter in register 7
 nop
 nop
-addi $r8, $r0, 5000000 # Initializes the counter completion in register 8, 5,000,000 cycles
+addi $r8, $r0, 1000000 # Initializes the counter completion in register 8, 5,000,000 cycles
 nop
 nop
-wait4:
+wait5:
 nop
 nop
 addi $r7, $r7, 1 # r7 += 1
 nop
 nop
-blt $r7, $r8, wait4 # while r7 < 5,000,000, go back to wait
+blt $r7, $r8, wait5 # while r7 < 5,000,000, go back to wait
 nop
 nop
 addi $r10, $r10, 1

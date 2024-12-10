@@ -2,7 +2,7 @@ module regfile (
     clock,
     ctrl_writeEnable, ctrl_reset, ctrl_writeReg,
     ctrl_readRegA, ctrl_readRegB, data_writeReg,
-    data_readRegA, data_readRegB, register1, register2, register3
+    data_readRegA, data_readRegB, register1, register2, register3, register4, register5, register6
 );
 
     input clock, ctrl_writeEnable, ctrl_reset;
@@ -10,7 +10,7 @@ module regfile (
     input [31:0] data_writeReg;
 
     output [31:0] data_readRegA, data_readRegB;
-    output [31:0] register1, register2, register3;
+    output [31:0] register1, register2, register3, register4, register5, register6;
 
 
     wire [31:0] wr;
@@ -19,6 +19,9 @@ module regfile (
 	assign register1 = reg_vals[1];
 	assign register2 = reg_vals[2];
 	assign register3 = reg_vals[3];
+	assign register4 = reg_vals[4];
+	assign register5 = reg_vals[5];
+	assign register6 = reg_vals[6];
 	
     wire [31:0] reg_vals [31:0];
 	assign reg_vals[0] = 32'b00000000000000000000000000000000; //reg 0 always reads 0

@@ -24,7 +24,10 @@ module processor(
     JB,
     JA1,
     JA2,
-    JB3,
+    JC1,
+    JC2,
+    JD1,
+    JD2,
     ps2_clk,
     ps2_data,
     
@@ -62,6 +65,9 @@ module processor(
     register1,
     register2,
     register3,
+    register4,
+    register5,
+    register6,
     
     // Switches for mode control
     SW
@@ -71,10 +77,13 @@ module processor(
 	
 	input BTNR;
 	
-	input [3:0] JB;
+	input [6:1] JB;
 	output [4:1] JA1;
     output [4:1] JA2;
-    output [4:1] JB3;
+    output [4:1] JC1;
+    output [4:1] JC2;
+    output [4:1] JD1;
+    output [4:1] JD2;
 	inout ps2_clk;
 	inout ps2_data;
 	 
@@ -104,7 +113,9 @@ module processor(
 	input [31:0] register1;
 	input [31:0] register2;
 	input [31:0] register3;
-	
+	input [31:0] register4;
+	input [31:0] register5;
+	input [31:0] register6;
 	// switches for animation vs keyboard
     input [15:0] SW;
 
@@ -408,9 +419,9 @@ wire [31:0] alu_b_bypass =
     always @(negedge clock) begin
         if (sw_reg == 5'b00001) curr_reg1 = sw_data;
         if (sw_reg == 5'b00010) curr_reg2 = sw_data;
-    end
-
-    reg [1:0] curr_reel; 
+    end 
+   
+    reg [2:0] curr_reel; 
     wire [5:0] update;
     reg just_updated;
     reg slow_clock;
@@ -426,16 +437,31 @@ wire [31:0] alu_b_bypass =
 //        (curr_reel == 3'b010 && update[2])) begin
 //        curr_reel = curr_reel + 1;
 //        end
-
-    end
+ 
+    end 
 //(curr_reel == 3'b000)
     // todo: pass inouts from board to top level module and all the way down
-    stepper stepper1(stepper_clock, BTNR, JB[1], JA1[4:1], ps2_clk, ps2_data,(curr_reel == 2'b01),update[0], LED_wire1, register1, SW);
-    stepper stepper2(stepper_clock, BTNR, JB[2], JA2[4:1], ps2_clk, ps2_data,(curr_reel == 2'b10),update[1], LED_wire2, register2, SW);
-    stepper stepper3(stepper_clock, BTNR, JB[2], JB3[4:1], ps2_clk, ps2_data,(curr_reel == 2'b11),update[2], LED_wire3, register3, SW); // @TODO: change JB on this one
-
+    
+    // HARDCODED OFFSETS
+    wire [9:0] offset1;
+    wire [9:0] offset2;
+    wire [9:0] offset3;
+    wire [9:0] offset4;
+    wire [9:0] offset5;
+    wire [9:0] offset6;
+    
+    assign offset1 = 16'b0;
+    assign offset2 = 16'b0;
+    assign offset3 = 16'b0;
+    assign offset4 = 16'b0;
+ 
+     
+    stepper stepper1(stepper_clock, BTNR, JB[1], JA1[4:1], ps2_clk, ps2_data,(curr_reel == 3'b001),update[0], LED_wire1, register1, SW, offset1);
+    stepper stepper2(stepper_clock, BTNR, JB[2], JA2[4:1], ps2_clk, ps2_data,(curr_reel == 3'b010),update[1], LED_wire2, register2, SW, offset2);
+    stepper stepper3(stepper_clock, BTNR, JB[3], JD1[4:1], ps2_clk, ps2_data,(curr_reel == 3'b011),update[2], LED_wire3, register3, SW, offset3); // @TODO: change JB on this one
+    stepper stepper4(stepper_clock, BTNR, JB[4], JC2[4:1], ps2_clk, ps2_data,(curr_reel == 3'b100),update[2], LED_wire3, register4, SW, offset4);
     always @(posedge stepper_clock) begin   
-        LED <= {LED_wire1[14],LED_wire2[14], LED_wire3[13:0]};
+        LED <= {LED_wire1};
     end
 
 	/* END CODE */

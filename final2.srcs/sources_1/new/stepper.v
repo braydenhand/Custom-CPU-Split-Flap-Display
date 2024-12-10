@@ -9,7 +9,9 @@ module stepper(
     output wire i_updated_wire,
     output reg [15:0] LED,
     input [31:0] curr_reg,
-    input [15:0] SW 
+    input [15:0] SW, 
+    input [15:0] offset
+    
     );
     reg [9:0] data_delay;
     reg [31:0] target; 
@@ -63,7 +65,7 @@ module stepper(
     
  always @(posedge CLK100MHZ) begin
 //    LED = {target[13:0],JB, accept_rst};
-        LED = {current[7:0], target[7:0]};
+        LED = {JB, current[13:0]};
 //    LED = {16'b1111111111111111};
 
 end
@@ -74,14 +76,14 @@ reg accept_rst;
 reg [26:0] letter_fix_counter;
 //    assign LED = {current[15:0]};  // width to match LED[15:0]
     always @(posedge CLK100MHZ) begin
-        i_updated = (scancode == 8'b01001100);
+        i_updated = (scancode == 8'b01011010); 
         // count to 2 seconds for new reset from magnet
         if (letter_fix_counter == 27'b1111111111111111111111111111) accept_rst <= 1'b1;
         else letter_fix_counter <= letter_fix_counter + 1;
         // do animation mode if SW[0] is on
         if (SW[0]) target = curr_reg;
         if (JB == 1'b1 && accept_rst) begin
-         current <= {16'b0000000000000000, SW[15:1],1'b0};
+         current <= {32'b0};
          accept_rst <= 1'b0;
          letter_fix_counter <= 27'b0;
          end
@@ -112,7 +114,7 @@ reg [26:0] letter_fix_counter;
                         default: control <= 4'b1010;
                     endcase
                     count <= 18'b0;  // Reset count
-                    if (current < 800) begin  // Position limit check
+                    if (current + offset < 800) begin  // Position limit check
                         current <= current + 1;
                     end
                     else begin
