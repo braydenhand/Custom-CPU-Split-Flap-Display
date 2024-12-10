@@ -28,7 +28,7 @@
 module Wrapper (
     input clk_100mhz,
     input BTNU, BTNR,
-    input [6:1] JB,
+    input [8:1] JB,
     output [4:1] JA1,
     output [4:1] JA2,
     output [4:1] JC1,

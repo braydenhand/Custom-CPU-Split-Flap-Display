@@ -65,7 +65,7 @@ module stepper(
     
  always @(posedge CLK100MHZ) begin
 //    LED = {target[13:0],JB, accept_rst};
-        LED = {JB, current[13:0]};
+        LED = {JA, current[10:0]};
 //    LED = {16'b1111111111111111};
 
 end

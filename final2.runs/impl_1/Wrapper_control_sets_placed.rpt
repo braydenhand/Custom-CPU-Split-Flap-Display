@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Tue Dec 10 05:15:31 2024
+| Date         : Tue Dec 10 06:49:36 2024
 | Host         : P1-04 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Wrapper_control_sets_placed.rpt
 | Design       : Wrapper
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    77 |
-|    Minimum number of control sets                        |    77 |
+| Total control sets                                       |    97 |
+|    Minimum number of control sets                        |    97 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   168 |
+| Unused register locations in slices containing registers |   238 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    77 |
+| Total control sets |    97 |
 | >= 0 to < 4        |     0 |
-| >= 4 to < 6        |    16 |
-| >= 6 to < 8        |     3 |
+| >= 4 to < 6        |    24 |
+| >= 6 to < 8        |     5 |
 | >= 8 to < 10       |     1 |
-| >= 10 to < 12      |     4 |
+| >= 10 to < 12      |     6 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    53 |
+| >= 16              |    61 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             160 |           57 |
-| No           | No                    | Yes                    |             486 |          209 |
-| No           | Yes                   | No                     |              32 |            8 |
-| Yes          | No                    | No                     |              85 |           19 |
-| Yes          | No                    | Yes                    |            1153 |          473 |
-| Yes          | Yes                   | No                     |             412 |          108 |
+| No           | No                    | No                     |             218 |           75 |
+| No           | No                    | Yes                    |             486 |          228 |
+| No           | Yes                   | No                     |              48 |           12 |
+| Yes          | No                    | No                     |             127 |           31 |
+| Yes          | No                    | Yes                    |            1153 |          472 |
+| Yes          | Yes                   | No                     |             618 |          160 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,83 +73,103 @@ Table of Contents
 +-----------------------+---------------------------------------+-------------------------------------+------------------+----------------+--------------+
 |      Clock Signal     |             Enable Signal             |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
 +-----------------------+---------------------------------------+-------------------------------------+------------------+----------------+--------------+
-|  clk_100mhz_IBUF_BUFG | CPU/stepper3/control[3]_i_1__1_n_0    |                                     |                1 |              4 |         4.00 |
-|  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper3/ps2/clk_inter0         |                1 |              4 |         4.00 |
 |  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper3/ps2/data_inter0        |                1 |              4 |         4.00 |
-|  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper2/ps2/data_inter0        |                1 |              4 |         4.00 |
-|  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper2/ps2/clk_inter0         |                1 |              4 |         4.00 |
-|  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper4/ps2/data_inter0        |                1 |              4 |         4.00 |
 |  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper1/ps2/clk_inter0         |                1 |              4 |         4.00 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper3/ps2/shift_frame          | CPU/stepper3/ps2/reset_bit_count    |                1 |              4 |         4.00 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper2/control[3]_i_1__0_n_0    |                                     |                1 |              4 |         4.00 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper2/ps2/shift_frame          | CPU/stepper2/ps2/reset_bit_count    |                2 |              4 |         2.00 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper4/control[3]_i_1__2_n_0    |                                     |                2 |              4 |         2.00 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper1/control[3]_i_1_n_0       |                                     |                1 |              4 |         4.00 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper1/ps2/shift_frame          | CPU/stepper1/ps2/reset_bit_count    |                1 |              4 |         4.00 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper4/ps2/shift_frame          | CPU/stepper4/ps2/reset_bit_count    |                1 |              4 |         4.00 |
-|  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper4/ps2/clk_inter0         |                1 |              4 |         4.00 |
 |  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper1/ps2/data_inter0        |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper2/ps2/clk_inter0         |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper2/ps2/data_inter0        |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper6/ps2/data_inter0        |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper6/ps2/clk_inter0         |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper4/ps2/clk_inter0         |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper4/ps2/data_inter0        |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper5/ps2/clk_inter0         |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper5/ps2/data_inter0        |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG |                                       | CPU/stepper3/ps2/clk_inter0         |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper2/ps2/shift_frame          | CPU/stepper2/ps2/reset_bit_count    |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper1/ps2/shift_frame          | CPU/stepper1/ps2/reset_bit_count    |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper1/control[3]_i_1_n_0       |                                     |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper6/ps2/shift_frame          | CPU/stepper6/ps2/reset_bit_count    |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper3/control[3]_i_1__1_n_0    |                                     |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper2/control[3]_i_1__0_n_0    |                                     |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper6/control[3]_i_1__4_n_0    |                                     |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper5/control[3]_i_1__3_n_0    |                                     |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper4/ps2/shift_frame          | CPU/stepper4/ps2/reset_bit_count    |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper4/control[3]_i_1__2_n_0    |                                     |                2 |              4 |         2.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper3/ps2/shift_frame          | CPU/stepper3/ps2/reset_bit_count    |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper5/ps2/shift_frame          | CPU/stepper5/ps2/reset_bit_count    |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper3/ps2/load_rx_data         |                                     |                2 |              7 |         3.50 |
 |  clk_100mhz_IBUF_BUFG | CPU/stepper2/ps2/load_rx_data         |                                     |                1 |              7 |         7.00 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper4/ps2/load_rx_data         |                                     |                1 |              7 |         7.00 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper3/ps2/load_rx_data         |                                     |                1 |              7 |         7.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper6/ps2/load_rx_data         |                                     |                1 |              7 |         7.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper4/ps2/load_rx_data         |                                     |                2 |              7 |         3.50 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper5/ps2/load_rx_data         |                                     |                1 |              7 |         7.00 |
 |  clk_100mhz_IBUF_BUFG | CPU/stepper1/ps2/load_rx_data         |                                     |                1 |              8 |         8.00 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper4/ps2/shift_frame          |                                     |                2 |             10 |         5.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper6/ps2/shift_frame          |                                     |                2 |             10 |         5.00 |
 |  clk_100mhz_IBUF_BUFG | CPU/stepper1/ps2/shift_frame          |                                     |                3 |             10 |         3.33 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper2/ps2/shift_frame          |                                     |                3 |             10 |         3.33 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper2/ps2/shift_frame          |                                     |                2 |             10 |         5.00 |
 |  clk_100mhz_IBUF_BUFG | CPU/stepper3/ps2/shift_frame          |                                     |                2 |             10 |         5.00 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper1/count_reg[17]_i_2_n_1    | CPU/stepper1/count[17]_i_1_n_0      |                4 |             18 |         4.50 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper3/count_reg[17]_i_2__1_n_1 | CPU/stepper3/count[17]_i_1__1_n_0   |                6 |             18 |         3.00 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper4/count_reg[17]_i_2__2_n_1 | CPU/stepper4/count[17]_i_1__2_n_0   |                3 |             18 |         6.00 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper2/count_reg[17]_i_2__0_n_1 | CPU/stepper2/count[17]_i_1__0_n_0   |                4 |             18 |         4.50 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper4/ps2/shift_frame          |                                     |                4 |             10 |         2.50 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper5/ps2/shift_frame          |                                     |                3 |             10 |         3.33 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper2/count_reg[17]_i_2__0_n_1 | CPU/stepper2/count[17]_i_1__0_n_0   |                5 |             18 |         3.60 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper4/count_reg[17]_i_2__2_n_1 | CPU/stepper4/count[17]_i_1__2_n_0   |                4 |             18 |         4.50 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper1/count_reg[17]_i_2_n_1    | CPU/stepper1/count[17]_i_1_n_0      |                6 |             18 |         3.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper5/count_reg[17]_i_2__3_n_1 | CPU/stepper5/count[17]_i_1__3_n_0   |                4 |             18 |         4.50 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper3/count_reg[17]_i_2__1_n_1 | CPU/stepper3/count[17]_i_1__1_n_0   |                4 |             18 |         4.50 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper6/count_reg[17]_i_2__4_n_1 | CPU/stepper6/count[17]_i_1__4_n_0   |                5 |             18 |         3.60 |
 |  cpu_clock_BUFG       |                                       |                                     |                6 |             18 |         3.00 |
-|  clk_100mhz_IBUF_BUFG | SW_IBUF[0]                            | CPU/stepper1/ScanCode/BTNR          |               10 |             22 |         2.20 |
-|  clk_100mhz_IBUF_BUFG | SW_IBUF[0]                            | CPU/stepper3/ScanCode/BTNR_0        |                4 |             22 |         5.50 |
-|  clk_100mhz_IBUF_BUFG | SW_IBUF[0]                            | CPU/stepper3/ScanCode/BTNR          |                6 |             22 |         3.67 |
-|  clk_100mhz_IBUF_BUFG | SW_IBUF[0]                            | CPU/stepper1/ScanCode/BTNR_0        |                8 |             22 |         2.75 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper2/letter_fix_counter       | CPU/stepper2/accept_rst0            |                7 |             27 |         3.86 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper1/letter_fix_counter       | CPU/stepper1/accept_rst0            |                7 |             27 |         3.86 |
+|  clk_100mhz_IBUF_BUFG | SW_IBUF[0]                            | CPU/stepper1/ScanCode/BTNR          |                7 |             22 |         3.14 |
+|  clk_100mhz_IBUF_BUFG | SW_IBUF[0]                            | CPU/stepper1/ScanCode/BTNR_0        |                5 |             22 |         4.40 |
+|  clk_100mhz_IBUF_BUFG | SW_IBUF[0]                            | CPU/stepper5/ScanCode/BTNR          |                9 |             22 |         2.44 |
+|  clk_100mhz_IBUF_BUFG | SW_IBUF[0]                            | CPU/stepper5/ScanCode/BTNR_0        |                8 |             22 |         2.75 |
+|  clk_100mhz_IBUF_BUFG | SW_IBUF[0]                            | CPU/stepper3/ScanCode/BTNR_0        |                6 |             22 |         3.67 |
+|  clk_100mhz_IBUF_BUFG | SW_IBUF[0]                            | CPU/stepper3/ScanCode/BTNR          |                7 |             22 |         3.14 |
 |  clk_100mhz_IBUF_BUFG | CPU/stepper3/letter_fix_counter       | CPU/stepper3/accept_rst0            |                7 |             27 |         3.86 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper1/letter_fix_counter       | CPU/stepper1/accept_rst0            |                7 |             27 |         3.86 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper6/letter_fix_counter       | CPU/stepper6/accept_rst0            |                7 |             27 |         3.86 |
 |  clk_100mhz_IBUF_BUFG | CPU/stepper4/letter_fix_counter       | CPU/stepper4/accept_rst0            |                7 |             27 |         3.86 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en039_out  | BTNU_IBUF                           |               14 |             32 |         2.29 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en021_out  | BTNU_IBUF                           |               12 |             32 |         2.67 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en053_out  | BTNU_IBUF                           |                6 |             32 |         5.33 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en0        | BTNU_IBUF                           |               18 |             32 |         1.78 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en015_out  | BTNU_IBUF                           |               18 |             32 |         1.78 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en031_out  | BTNU_IBUF                           |               10 |             32 |         3.20 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en013_out  | BTNU_IBUF                           |               23 |             32 |         1.39 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en051_out  | BTNU_IBUF                           |               17 |             32 |         1.88 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en023_out  | BTNU_IBUF                           |               10 |             32 |         3.20 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en025_out  | BTNU_IBUF                           |               12 |             32 |         2.67 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en035_out  | BTNU_IBUF                           |                9 |             32 |         3.56 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en041_out  | BTNU_IBUF                           |               17 |             32 |         1.88 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper2/letter_fix_counter       | CPU/stepper2/accept_rst0            |                7 |             27 |         3.86 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper5/letter_fix_counter       | CPU/stepper5/accept_rst0            |                7 |             27 |         3.86 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper5/current[31]_i_2__3_n_0   | CPU/stepper5/current[31]_i_1__3_n_0 |                9 |             32 |         3.56 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper1/current[31]_i_2_n_0      | CPU/stepper1/current[31]_i_1_n_0    |                5 |             32 |         6.40 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper4/current[31]_i_2__2_n_0   | CPU/stepper4/current[31]_i_1__2_n_0 |                5 |             32 |         6.40 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper6/current[31]_i_2__4_n_0   | CPU/stepper6/current[31]_i_1__4_n_0 |                9 |             32 |         3.56 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en057_out  | BTNU_IBUF                           |               10 |             32 |         3.20 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper3/current[31]_i_2__1_n_0   | CPU/stepper3/current[31]_i_1__1_n_0 |                8 |             32 |         4.00 |
+|  clk_100mhz_IBUF_BUFG | CPU/stepper2/current[31]_i_2__0_n_0   | CPU/stepper2/current[31]_i_1__0_n_0 |                6 |             32 |         5.33 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en053_out  | BTNU_IBUF                           |               10 |             32 |         3.20 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en047_out  | BTNU_IBUF                           |               25 |             32 |         1.28 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en049_out  | BTNU_IBUF                           |                7 |             32 |         4.57 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en015_out  | BTNU_IBUF                           |               20 |             32 |         1.60 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en035_out  | BTNU_IBUF                           |                8 |             32 |         4.00 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en041_out  | BTNU_IBUF                           |               16 |             32 |         2.00 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en043_out  | BTNU_IBUF                           |               17 |             32 |         1.88 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en021_out  | BTNU_IBUF                           |               13 |             32 |         2.46 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en031_out  | BTNU_IBUF                           |               12 |             32 |         2.67 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en023_out  | BTNU_IBUF                           |               11 |             32 |         2.91 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en027_out  | BTNU_IBUF                           |               11 |             32 |         2.91 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en01_out   | BTNU_IBUF                           |                7 |             32 |         4.57 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en017_out  | BTNU_IBUF                           |               11 |             32 |         2.91 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en029_out  | BTNU_IBUF                           |               19 |             32 |         1.68 |
 |  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en011_out  | BTNU_IBUF                           |               15 |             32 |         2.13 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en027_out  | BTNU_IBUF                           |                9 |             32 |         3.56 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper4/current[31]_i_2__2_n_0   | CPU/stepper4/current[31]_i_1__2_n_0 |                6 |             32 |         5.33 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en05_out   | BTNU_IBUF                           |                9 |             32 |         3.56 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en029_out  | BTNU_IBUF                           |               20 |             32 |         1.60 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en017_out  | BTNU_IBUF                           |               10 |             32 |         3.20 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en057_out  | BTNU_IBUF                           |                8 |             32 |         4.00 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en013_out  | BTNU_IBUF                           |               20 |             32 |         1.60 |
 |  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en019_out  | BTNU_IBUF                           |               14 |             32 |         2.29 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper2/current[31]_i_2__0_n_0   | CPU/stepper2/current[31]_i_1__0_n_0 |                8 |             32 |         4.00 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en03_out   | BTNU_IBUF                           |               11 |             32 |         2.91 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en033_out  | BTNU_IBUF                           |                9 |             32 |         3.56 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en047_out  | BTNU_IBUF                           |               22 |             32 |         1.45 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en055_out  | BTNU_IBUF                           |               11 |             32 |         2.91 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en09_out   | BTNU_IBUF                           |                7 |             32 |         4.57 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en045_out  | BTNU_IBUF                           |               17 |             32 |         1.88 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper3/current[31]_i_2__1_n_0   | CPU/stepper3/current[31]_i_1__1_n_0 |                9 |             32 |         3.56 |
-|  clk_100mhz_IBUF_BUFG | CPU/stepper1/current[31]_i_2_n_0      | CPU/stepper1/current[31]_i_1_n_0    |                7 |             32 |         4.57 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en01_out   | BTNU_IBUF                           |                8 |             32 |         4.00 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en059_out  | BTNU_IBUF                           |                9 |             32 |         3.56 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en07_out   | BTNU_IBUF                           |               10 |             32 |         3.20 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en049_out  | BTNU_IBUF                           |               10 |             32 |         3.20 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en043_out  | BTNU_IBUF                           |               20 |             32 |         1.60 |
-|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en037_out  | BTNU_IBUF                           |                9 |             32 |         3.56 |
-| ~cpu_clock_BUFG       | CPU/dx/dff_loop[6].dff/q_reg_2        | BTNU_IBUF                           |               39 |             70 |         1.79 |
-| ~cpu_clock_BUFG       | CPU/fd/dff_loop[30].dff/q_reg_1       | BTNU_IBUF                           |               40 |             91 |         2.28 |
-|  cpu_clock_BUFG       |                                       | CPU/dx/dff_loop[6].dff/q_reg_2      |               82 |            139 |         1.70 |
-|  clk_100mhz_IBUF_BUFG |                                       |                                     |               51 |            157 |         3.08 |
-| ~cpu_clock_BUFG       |                                       | BTNU_IBUF                           |              127 |            347 |         2.73 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en025_out  | BTNU_IBUF                           |                9 |             32 |         3.56 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en033_out  | BTNU_IBUF                           |                7 |             32 |         4.57 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en0        | BTNU_IBUF                           |               17 |             32 |         1.88 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en037_out  | BTNU_IBUF                           |               10 |             32 |         3.20 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en039_out  | BTNU_IBUF                           |               13 |             32 |         2.46 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en03_out   | BTNU_IBUF                           |               10 |             32 |         3.20 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en045_out  | BTNU_IBUF                           |               16 |             32 |         2.00 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en09_out   | BTNU_IBUF                           |               11 |             32 |         2.91 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en055_out  | BTNU_IBUF                           |               12 |             32 |         2.67 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en059_out  | BTNU_IBUF                           |               11 |             32 |         2.91 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en05_out   | BTNU_IBUF                           |                6 |             32 |         5.33 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en07_out   | BTNU_IBUF                           |                7 |             32 |         4.57 |
+|  cpu_clock_BUFG       | CPU/mw/dff_loop[28].dff/in_en051_out  | BTNU_IBUF                           |                9 |             32 |         3.56 |
+| ~cpu_clock_BUFG       | CPU/dx/dff_loop[6].dff/q_reg_2        | BTNU_IBUF                           |               44 |             70 |         1.59 |
+| ~cpu_clock_BUFG       | CPU/fd/dff_loop[30].dff/q_reg_1       | BTNU_IBUF                           |               44 |             91 |         2.07 |
+|  cpu_clock_BUFG       |                                       | CPU/dx/dff_loop[6].dff/q_reg_2      |               91 |            139 |         1.53 |
+|  clk_100mhz_IBUF_BUFG |                                       |                                     |               69 |            215 |         3.12 |
+| ~cpu_clock_BUFG       |                                       | BTNU_IBUF                           |              137 |            347 |         2.53 |
 +-----------------------+---------------------------------------+-------------------------------------+------------------+----------------+--------------+
 
 

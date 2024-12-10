@@ -77,7 +77,7 @@ module processor(
 	
 	input BTNR;
 	
-	input [6:1] JB;
+	input [8:1] JB;
 	output [4:1] JA1;
     output [4:1] JA2;
     output [4:1] JC1;
@@ -454,12 +454,16 @@ wire [31:0] alu_b_bypass =
     assign offset2 = 16'b0;
     assign offset3 = 16'b0;
     assign offset4 = 16'b0;
- 
+    assign offset5 = 16'b0;
+    wire [4:0] new_stepper_6;
+    assign new_stepper_6 =  {JC1[4:3],JB[8],JC1[1], 1'b0};
      
     stepper stepper1(stepper_clock, BTNR, JB[1], JA1[4:1], ps2_clk, ps2_data,(curr_reel == 3'b001),update[0], LED_wire1, register1, SW, offset1);
     stepper stepper2(stepper_clock, BTNR, JB[2], JA2[4:1], ps2_clk, ps2_data,(curr_reel == 3'b010),update[1], LED_wire2, register2, SW, offset2);
-    stepper stepper3(stepper_clock, BTNR, JB[3], JD1[4:1], ps2_clk, ps2_data,(curr_reel == 3'b011),update[2], LED_wire3, register3, SW, offset3); // @TODO: change JB on this one
+    stepper stepper3(stepper_clock, BTNR, JB[3], JD1[4:1], ps2_clk, ps2_data,(curr_reel == 3'b011),update[2], LED_wire3, register3, SW, offset3); 
     stepper stepper4(stepper_clock, BTNR, JB[4], JC2[4:1], ps2_clk, ps2_data,(curr_reel == 3'b100),update[2], LED_wire3, register4, SW, offset4);
+    stepper stepper5(stepper_clock, BTNR, JB[5], JD2[4:1], ps2_clk, ps2_data,(curr_reel == 3'b101),update[2], LED_wire3, register6, SW, offset5);
+    stepper stepper6(stepper_clock, BTNR, JB[6], new_stepper_6, ps2_clk, ps2_data,(curr_reel == 3'b110),update[2], LED_wire3, register5, SW, offset6);
     always @(posedge stepper_clock) begin   
         LED <= {LED_wire1};
     end
