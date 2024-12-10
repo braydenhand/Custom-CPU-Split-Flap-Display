@@ -435,7 +435,7 @@ wire [31:0] alu_b_bypass =
     stepper stepper3(stepper_clock, BTNR, JB[2], JB3[4:1], ps2_clk, ps2_data,(curr_reel == 2'b11),update[2], LED_wire3, register3, SW); // @TODO: change JB on this one
 
     always @(posedge stepper_clock) begin   
-        LED <= {LED_wire3[15:0]};
+        LED <= {LED_wire1[14],LED_wire2[14], LED_wire3[13:0]};
     end
 
 	/* END CODE */

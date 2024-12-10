@@ -62,21 +62,30 @@ module stepper(
     reg [14:0] clk_check;
     
  always @(posedge CLK100MHZ) begin
-    LED = {init, JB, target[13:0]};
+//    LED = {target[13:0],JB, accept_rst};
+        LED = {current[14:0], JB};
 //    LED = {16'b1111111111111111};
 
 end
  
  
 assign JA = control;
+reg accept_rst;
+reg [27:0] letter_fix_counter;
 //    assign LED = {current[15:0]};  // width to match LED[15:0]
     always @(posedge CLK100MHZ) begin
         i_updated = (scancode == 8'b01001100);
+        // count to 2 seconds for new reset from magnet
+        if (letter_fix_counter == 28'b1111111111111111111111111111) accept_rst <= 1'b1;
+        else letter_fix_counter <= letter_fix_counter + 1;
         // do animation mode if SW[0] is on
         if (SW[0]) target = curr_reg;
-        if (JB == 1'b1) begin
-         current <= 32'b0;
+        if (JB == 1'b1 && accept_rst) begin
+         current <= {16'b0000000000000000, SW};
+         accept_rst <= 1'b0;
+         letter_fix_counter <= 28'b0;
          end
+         else letter_fix_counter = letter_fix_counter + 1; 
 //        else begin // else, get keyboard input
 
         // Add reset synchronization
@@ -109,6 +118,7 @@ assign JA = control;
                     else begin
                         current <= 32'b0;
                     end
+                    current <= current + 1;
                 end
             end
         

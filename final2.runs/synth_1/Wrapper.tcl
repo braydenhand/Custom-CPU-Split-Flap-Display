@@ -111,7 +111,6 @@ set_property used_in_implementation false [get_files C:/Users/bkh18/ece350-newfi
 add_files -quiet C:/Users/bkh18/ece350-newfinal/final2.ip_user_files/mem_init_files/stepper_opt.dcp
 set_property used_in_implementation false [get_files C:/Users/bkh18/ece350-newfinal/final2.ip_user_files/mem_init_files/stepper_opt.dcp]
 read_mem {
-  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/lookup.mem
   C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/bex.mem
   C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/final_test.mem
   C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/branch_mem_edge.mem
@@ -133,6 +132,7 @@ read_mem {
   C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/jr.mem
   C:/Users/bkh18/ece350-newfinal/ece_final.mem
   C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/ece_final_slow.mem
+  C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/imports/ece350-newfinal/lookup.mem
 }
 read_verilog -library xil_defaultlib {
   C:/Users/bkh18/ece350-newfinal/final2.srcs/sources_1/new/stepper.v

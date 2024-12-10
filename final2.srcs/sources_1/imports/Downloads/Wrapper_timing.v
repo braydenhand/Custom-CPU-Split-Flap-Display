@@ -24,6 +24,7 @@
  *
  **/
  
+ 
 module Wrapper (
     input clk_100mhz,
     input BTNU, BTNR,
@@ -71,6 +72,8 @@ module Wrapper (
 //    JA,
 //    ps2_clk,
 //    ps2_data,
+	
+	
 	
 	
 	reg [8:0] clk_div;

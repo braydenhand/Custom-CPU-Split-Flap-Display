@@ -100,14 +100,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/ece350-newfinal/lookup.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/lookup.mem"/>
-          <Attr Name="ImportTime" Val="1733430954"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/Ps2Interface.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -638,6 +630,14 @@
           <Attr Name="ImportTime" Val="1733528640"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/ece350-newfinal/lookup.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/lookup.mem"/>
+          <Attr Name="ImportTime" Val="1733788534"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -1270,14 +1270,6 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/exc.mem"/>
           <Attr Name="ImportTime" Val="1730403644"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/imports/ece350-newfinal/lookup.mem">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/lookup.mem"/>
-          <Attr Name="ImportTime" Val="1733430954"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
